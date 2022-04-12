@@ -1,7 +1,8 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 
-import App from './App'
+import './styles.css'
+import Router from './router'
 
 const root = createRoot(
   document.getElementById('root')
@@ -9,6 +10,6 @@ const root = createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <Router />
   </React.StrictMode>
 )
