@@ -5,11 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "npm run build && surge dist --domain https://map-unipaz.surge.sh",
     "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite-plugin-html": "3.2.0"
   },
   "dependencies": {
     "import-meta-resolve": "1.1.1",

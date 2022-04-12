@@ -10,8 +10,8 @@
   "scripts": {
     "co": "npm run lint && git add . && sui-mono commit",
     "lint": "eslint .",
-    "deploy": "npm run deploy --workspace=map",
     "dev": "npm run dev --workspace=map",
+    "deploy": "npm run deploy --workspace=page",
     "dev:page": "npm run dev --workspace=page"
   },
   "devDependencies": {
@@ -19,7 +19,8 @@
     "eslint-config-standard-jsx": "10.0.0",
     "eslint-config-standard-react": "11.0.1",
     "standard": "16.0.4",
-    "vite": "2.9.1"
+    "vite": "2.9.1",
+    "vite-plugin-html": "3.2.0"
   },
   "eslintConfig": {
     "parserOptions": {
@@ -28,7 +29,11 @@
         "modules": true
       }
     },
-    "extends": ["standard", "standard-jsx", "standard-react"],
+    "extends": [
+      "standard",
+      "standard-jsx",
+      "standard-react"
+    ],
     "rules": {
       "array-element-newline": [
         "error",
