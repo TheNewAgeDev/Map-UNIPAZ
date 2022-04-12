@@ -1,43 +1,47 @@
 {
-  "name": "map-unipaz",
+  "name": "map-unipaz-project",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
-  "version": "0.1.0",
+  "workspaces": [
+    "map",
+    "page"
+  ],
   "scripts": {
     "co": "npm run lint && git add . && sui-mono commit",
-    "dev": "vite",
-    "build": "vite build",
-    "deploy": "npm run build && surge dist --domain https://map-unipaz.surge.sh",
-    "preview": "vite preview",
-    "lint": "standard"
+    "lint": "eslint .",
+    "deploy": "npm run deploy --workspace=map",
+    "dev": "npm run dev --workspace=map",
+    "dev:page": "npm run dev --workspace=page"
   },
   "devDependencies": {
-    "@s-ui/mono": "2.23.0",
+    "@s-ui/mono": "2.26.0",
+    "eslint-config-standard-jsx": "10.0.0",
+    "eslint-config-standard-react": "11.0.1",
     "standard": "16.0.4",
-    "vite": "2.8.0",
-    "vite-plugin-html": "3.2.0"
-  },
-  "dependencies": {
-    "import-meta-resolve": "1.1.1",
-    "leaflet": "1.7.1",
-    "leaflet-defaulticon-compatibility": "0.1.1",
-    "leaflet.layerscontrol-minimap": "1.0.21"
+    "vite": "2.9.1"
   },
   "eslintConfig": {
-    "extends": "standard",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+      }
+    },
+    "extends": ["standard", "standard-jsx", "standard-react"],
     "rules": {
       "array-element-newline": [
         "error",
         {
           "minItems": 3
         }
-      ]
+      ],
+      "react/react-in-jsx-scope": "off"
     }
   },
-  "standard": {
-    "ignore": [
-      "/assets/",
-      "/dist/"
-    ]
-  }
+  "eslintIgnore": [
+    "node_modules",
+    "assets",
+    "dist"
+  ]
 }

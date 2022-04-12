@@ -25,4 +25,4 @@ dist-ssr
 
 .env.local
 
-assets/images/*
+package-lock.json

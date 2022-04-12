@@ -1,0 +1,20 @@
+{
+  "name": "map-unipaz",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npm run build && surge dist --domain https://map-unipaz.surge.sh",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite-plugin-html": "3.2.0"
+  },
+  "dependencies": {
+    "import-meta-resolve": "1.1.1",
+    "leaflet": "1.7.1",
+    "leaflet-defaulticon-compatibility": "0.1.1",
+    "leaflet.layerscontrol-minimap": "1.0.21"
+  }
+}
