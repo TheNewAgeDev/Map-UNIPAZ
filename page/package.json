@@ -2,10 +2,12 @@
   "name": "page",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run copy:map && vite",
+    "rename": "node -e \"require('fs').rename('public/index.html', 'public/map.html', function(err) { if (err) console.log(err); console.log('File successfully renamed!') })\"",
+    "copy:map": "cpy ../map/dist/** ../page/public && npm run rename",
     "copy": "cpy dist/index.html --rename=200.html .",
     "build": "vite build && npm run copy",
-    "deploy": "npm run build && surge dist --domain https://map-unipaz.surge.sh",
+    "deploy": "npm run copy:map && npm run build && surge dist --domain https://map-unipaz.surge.sh",
     "preview": "vite preview"
   },
   "dependencies": {

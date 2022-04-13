@@ -11,14 +11,17 @@
     "co": "npm run lint && git add . && sui-mono commit",
     "lint": "eslint .",
     "dev": "npm run dev --workspace=map",
-    "deploy": "npm run deploy --workspace=page",
-    "dev:page": "npm run dev --workspace=page"
+    "dev:page": "npm run build --workspace=map && npm run dev --workspace=page",
+    "build": "npm run build --workspace=map",
+    "build:page": "npm run build --workspace=page",
+    "deploy": "npm run build --workspace=map && npm run deploy --workspace=page"
   },
   "devDependencies": {
     "@s-ui/mono": "2.26.0",
     "cpy-cli": "4.1.0",
     "eslint-config-standard-jsx": "10.0.0",
     "eslint-config-standard-react": "11.0.1",
+    "renamer": "4.0.0",
     "standard": "16.0.4",
     "vite": "2.9.1",
     "vite-plugin-html": "3.2.0"
