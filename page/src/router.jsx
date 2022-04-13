@@ -1,16 +1,22 @@
-import { Switch, Route } from 'wouter'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
 
 import App from './App'
 import Map from './map'
-import NotFound from './404'
 
 const RouterComponent = () => {
   return (
-    <Switch>
-      <Route path='/' component={App} />
-      <Route path='/map' component={Map} />
-      <Route component={NotFound} />
-    </Switch>
+    <Router>
+
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='map' element={<Map />} />
+      </Routes>
+
+    </Router>
   )
 }
 
