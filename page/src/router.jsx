@@ -4,8 +4,8 @@ import {
   Route
 } from 'react-router-dom'
 
-import App from './App'
-import Map from './map'
+import App from './components/App'
+import Map from './components/Map'
 
 const RouterComponent = () => {
   return (
