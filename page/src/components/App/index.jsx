@@ -8,7 +8,7 @@ const App = () => {
       <Header />
       <div className={styles.app}>
         <a href='/map'>Visita el mapa aqui</a>
-        <iframe src='/map' width={700} height={400} />
+        <iframe src='/map'/>
       </div>
     </>
   )

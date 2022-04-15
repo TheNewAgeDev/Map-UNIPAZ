@@ -1,3 +1,5 @@
+import './styles/main.css'
+
 const load = document.createElement('div')
 load.innerHTML = 'Cargando...'
 

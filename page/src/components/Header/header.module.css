@@ -1,13 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
 .header {
   width: 100%;
   height: 8rem;
 
-  background-color: #95d1cc1f;
-  color: #22577E;
+  background: #2193b0;
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  text-align: center;
+
+  border-bottom: 2px dotted #3e7dab8b;
+  user-select: none;
+}
+
+.header span {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 2rem;
+
+  color: #08133f;
+
+  text-transform: uppercase;
+  cursor: auto;
+}
+
+.header span::before {
+  content: "Mapa Interactivo - UNIPAZ";
+  color: transparent;
+  position: absolute;
+
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 2px,
+    rgba(255, 255, 255, 0.427) 2px,
+    rgba(255, 255, 255, 0.245) 3px
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  top: 0;
+  left: 0;
+  transition: 1s;
 }

@@ -7,7 +7,7 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import 'leaflet.layerscontrol-minimap/control.layers.minimap.css'
 import 'leaflet.layerscontrol-minimap'
 
-import './styles.css'
+import './styles/leaflet-custom.css'
 
 const CENTER = [7.06758, -73.74541] // Centro de UNIPAZ
 const BOUNDS = [

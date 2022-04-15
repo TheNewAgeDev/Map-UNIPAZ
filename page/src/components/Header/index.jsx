@@ -3,7 +3,7 @@ import styles from './header.module.css'
 const Header = () => {
   return (
     <header className={styles.header}>
-      Mapa Interactivo - UNIPAZ
+      <span>Mapa Interactivo - UNIPAZ</span>
     </header>
   )
 }

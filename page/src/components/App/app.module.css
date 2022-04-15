@@ -9,3 +9,41 @@
   align-items: center;
   flex-direction: column;
 }
+
+.app a {
+  width: 100%;
+  height: 4rem;
+  margin: 1rem 0;
+
+  background: #2193b0;
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+
+  border: none;
+  border-radius: 0.5rem;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+
+  color: #ffffff;
+
+  text-transform: uppercase;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app a:hover {
+  background: #2193b0;
+  background: -webkit-linear-gradient(to left, #63a4b2, #53a9be);
+  background: linear-gradient(to left, #63a4b2, #53a9be);
+}
+
+.app iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 50vh;
+}
