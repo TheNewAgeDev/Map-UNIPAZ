@@ -4,8 +4,8 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import * as Lft from 'leaflet'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility'
 
-import 'leaflet.layerscontrol-minimap/control.layers.minimap.css'
-import 'leaflet.layerscontrol-minimap'
+import 'leaflet-switch-basemap/src/L.switchBasemap.css'
+import 'leaflet-switch-basemap/src/L.switchBasemap'
 
 import './styles/leaflet-custom.css'
 

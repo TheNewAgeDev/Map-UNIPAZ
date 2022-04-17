@@ -1,7 +1,7 @@
 const HTML = `
   <div class="center">
     <h3>{{ title }}</h3>
-    <img class="images-popup" src="/images/edifAulas.JPG" alt="Edificio de Aulas" />
+    <img class="images-popup" src="/images/delimit/edifAulas.JPG" alt="Edificio de Aulas" />
   </div>
 `
 
