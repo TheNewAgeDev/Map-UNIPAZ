@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "leaflet": "1.7.1",
-    "leaflet-defaulticon-compatibility": "0.1.1",
-    "leaflet-switch-basemap": "1.0.4"
+    "leaflet-defaulticon-compatibility": "0.1.1"
   }
 }

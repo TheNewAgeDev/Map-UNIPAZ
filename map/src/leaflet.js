@@ -4,9 +4,6 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import * as Lft from 'leaflet'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility'
 
-import 'leaflet-switch-basemap/src/L.switchBasemap.css'
-import 'leaflet-switch-basemap/src/L.switchBasemap'
-
 import './styles/leaflet-custom.css'
 
 const CENTER = [7.06758, -73.74541] // Centro de UNIPAZ

@@ -1,10 +1,11 @@
 /* eslint-disable quote-props */
 import { map, L } from './leaflet'
+import '../customPlugins/switchBasemap'
 
 import { getConfigStorage, setConfigStorage } from './storage'
 import { MARK_LOCATIONS } from './graphMap'
 
-const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Por Defecto'
+const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Dark Mode'
 
 export const LAYERS = {
   'Por Defecto': {
@@ -36,7 +37,8 @@ Object.entries(LAYERS).forEach(([key, value]) => {
     id: value.id || '',
     accessToken: value.token || '',
     subdomains: value.subdomains || 'abc',
-    attribution: ATTRIBUTION
+    attribution: ATTRIBUTION,
+    name: key
   }
 
   const newLayer = L.tileLayer(value.url, SETTINGS)
@@ -55,10 +57,10 @@ L.control.layers(null, MARK_LOCATIONS, {
   collapsed: false
 }).addTo(map)
 
-L.basemapsSwitcher(LAYERS_DEFINE, {
+L.control.layers.minimap(LAYERS_DEFINE, {
   position: 'bottomright'
 }).addTo(map)
 
-map.on('baselayerchange', (e) => {
-  setConfigStorage({ defaultLayer: e.name })
+map.on('layeradd', ({ layer }) => {
+  setConfigStorage({ defaultLayer: layer.options.name })
 })
