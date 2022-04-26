@@ -22,6 +22,7 @@ select.onAdd = function (map) {
 select.update = function () {
   this._div.innerHTML = `
     <label for="select-location"><h4>Lugares de UNIPAZ</h4></label>
+
     <select class="input-select" name="select-location" id="select-location">
       <option value="default" selected disabled hidden>Seleccione un lugar:</option>
 
@@ -45,7 +46,6 @@ selectLocation.addEventListener('change', async function (e) {
   }
 
   const id = e.target.value
-  selectLocation.value = 'default'
 
   const LOCATIONS = DELIMITS_ARRAY.filter(item => item.id === id)
 
@@ -61,7 +61,6 @@ selectLocation.addEventListener('change', async function (e) {
   })
 
   selectedLocation.addTo(map)
-
   selectedLocation.eachLayer(function (layer) {
     layer.openPopup()
   })
@@ -70,5 +69,6 @@ selectLocation.addEventListener('change', async function (e) {
 
   time = setTimeout(() => {
     if (selectedLocation) selectedLocation.remove()
+    selectLocation.value = 'default'
   }, 10000)
 })

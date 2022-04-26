@@ -49,11 +49,6 @@ export const LABORATIO_CIENCIAS = {
   id: '06db2af3-d269-4ba0-b9cc-7373062519a3',
   properties: {
     name: 'Laboratorio Ciencias Basicas',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

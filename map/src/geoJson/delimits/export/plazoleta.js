@@ -31,11 +31,6 @@ export const PLAZOLETA = {
   id: '9671f54c-a98c-4dc9-9322-f87e9bf9bdac',
   properties: {
     name: 'Plazoleta de la Paz',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

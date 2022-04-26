@@ -15,11 +15,6 @@ export const CANCHA_VOLEY_1 = {
   id: 'e43222ed-b1c4-40dd-8e10-2834b2779d78',
   properties: {
     name: 'Cancha Voleibol 1',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

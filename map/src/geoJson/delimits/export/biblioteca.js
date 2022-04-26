@@ -37,11 +37,6 @@ export const BIBLIOTECA = {
   id: 'f4df7b39-2337-427b-b7bd-b0135985d433',
   properties: {
     name: 'Biblioteca, Auditorio, Salas de Informatica',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

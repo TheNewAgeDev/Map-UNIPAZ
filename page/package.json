@@ -7,7 +7,7 @@
     "copy:map": "cpy ../map/dist/** ../page/public && npm run rename",
     "copy": "cpy dist/index.html --rename=200.html .",
     "build": "rimraf dist && vite build && npm run copy",
-    "deploy": "npm run copy:map && npm run build && surge dist --domain https://map-unipaz.surge.sh",
+    "deploy": "rimraf public && npm run copy:map && npm run build && surge dist --domain https://map-unipaz.surge.sh",
     "preview": "vite preview"
   },
   "dependencies": {

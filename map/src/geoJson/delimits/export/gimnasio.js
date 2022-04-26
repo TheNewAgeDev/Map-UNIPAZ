@@ -15,11 +15,6 @@ export const GIMNASIO = {
   id: 'a47bae9a-cfb6-4f45-8901-10545345c82d',
   properties: {
     name: 'Gimnasio',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

@@ -25,11 +25,6 @@ export const AULA12_13 = {
   id: '7f3cb49c-bd75-4dbe-9051-20ef56275e40',
   properties: {
     name: 'Aula 12 y 13',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

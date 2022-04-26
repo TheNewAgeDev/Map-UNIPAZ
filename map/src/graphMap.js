@@ -3,8 +3,8 @@ import { map, L } from './leaflet'
 import { getConfigStorage } from './storage'
 
 import './select'
-import { onEachFeature, style } from './info'
-
+import { onEachFeature } from './info'
+import { styleDefault } from './categories'
 import { UNIPAZ_LOCATIONS } from './geoJson/unipaz'
 
 const configStorage = getConfigStorage()
@@ -14,7 +14,7 @@ const RETORNO = L.marker([7.071283672458979, -73.73667776584625])
 
 export const UNIPAZ = L.geoJson(UNIPAZ_LOCATIONS, {
   onEachFeature,
-  style
+  style: styleDefault
 })
 
 configStorage?.retorno && RETORNO.addTo(map)

@@ -37,11 +37,6 @@ export const LABORATORIO_PRODUCCION = {
   id: '24518d9c-5b39-48c6-8414-238bc4ea3067',
   properties: {
     name: 'Laboratorio De Producción',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

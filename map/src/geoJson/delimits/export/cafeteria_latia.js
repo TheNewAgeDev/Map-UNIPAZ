@@ -49,11 +49,6 @@ export const CAFETERIA_LATIA = {
   id: 'a037b8dc-fb5d-472c-9cd7-f62877680356',
   properties: {
     name: 'Cafeteria La Tia',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

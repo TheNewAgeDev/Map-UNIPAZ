@@ -3,12 +3,7 @@ const OPTIONS = {
   id: '5b986427-b620-4602-bcdf-9db4f169f6f0',
   properties: {
     name: 'Parqueadero Administrativo 2',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }
 

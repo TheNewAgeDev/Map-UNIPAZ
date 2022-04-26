@@ -25,11 +25,6 @@ export const LABORATORIO_ANATOMIA = {
   id: '20c94bcb-c063-4be7-bd98-bd4cf210c7e4',
   properties: {
     name: 'Laboratorio De Anatomía',
-    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
-    fillColor: '#87DF6A',
-    color: 'white',
-    hoverColor: '#17202A',
-    hoverFillColor: '#87DF6A',
-    opacity: 0.5
+    category: 'default'
   }
 }

@@ -1,6 +1,6 @@
 /* eslint-disable no-return-assign */
 import { map, L } from './leaflet'
-import { UNIPAZ } from './graphMap'
+import { resetStyleHover, styleHover } from './categories'
 
 import { getConfigStorage, setConfigStorage } from './storage'
 
@@ -48,34 +48,21 @@ map.on('overlayremove', function (eo) {
 
 /* Muestra la Información Desplegada */
 
-function styleHover (e) {
-  const layer = e.target
-  const properties = layer.feature.properties
-
-  layer.setStyle({
-    weight: 2,
-    fillColor: properties.hoverFillColor || properties.fillColor,
-    color: properties.hoverColor || '#17202A',
-    dashArray: '3',
-    opacity: 1
-  })
-
-  info?.update(properties)
-}
-
-function resetStyleHover (e) {
-  UNIPAZ.resetStyle(e.target)
-
-  info?.update()
-}
-
 function zoomToFeature (e) {
   map.fitBounds(e.target.getBounds())
 }
 
 const getMessage = (properties) => {
-  const { name, description, html } = properties
-  return html.replace('{{ title }}', name).replace('{{ description }}', description)
+  const { name, categorie, html } = properties
+
+  const mapObj = {
+    '{{ title }}': name,
+    '{{ categorie }}': categorie
+  }
+
+  return html.replace(/{{ title }}|{{ categorie }}/gi, function (matched) {
+    return mapObj[matched]
+  })
 }
 
 export const onEachFeature = (feature, layer) => {
@@ -90,15 +77,4 @@ export const onEachFeature = (feature, layer) => {
     : `<strong>Edificio</strong>: ${feature.properties.name}`
 
   layer.bindPopup(message)
-}
-
-export const style = (feature) => {
-  return {
-    fillColor: feature.properties.fillColor || '#87DF6A',
-    fillOpacity: 0.6,
-    weight: 2,
-    opacity: feature.properties.opacity || 0,
-    color: feature.properties.color || 'white',
-    dashArray: '3'
-  }
 }
