@@ -73,6 +73,11 @@ function zoomToFeature (e) {
   map.fitBounds(e.target.getBounds())
 }
 
+const getMessage = (properties) => {
+  const { name, description, html } = properties
+  return html.replace('{{ title }}', name).replace('{{ description }}', description)
+}
+
 export const onEachFeature = (feature, layer) => {
   layer.on({
     mouseover: styleHover,
@@ -80,12 +85,9 @@ export const onEachFeature = (feature, layer) => {
     click: zoomToFeature
   })
 
-  const message = `
-    ${
-      feature.properties.html?.replace('{{ title }}', feature.properties.name) ||
-      `<strong>Edificio</strong>: ${feature.properties.name}`
-    }
-  `
+  const message = feature.properties.html
+    ? getMessage(feature.properties)
+    : `<strong>Edificio</strong>: ${feature.properties.name}`
 
   layer.bindPopup(message)
 }

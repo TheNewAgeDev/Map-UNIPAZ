@@ -17,6 +17,7 @@ export const CAFETERIA = {
   id: 'c755bda3-f8ee-496d-9e67-a3a43bb83b1a',
   properties: {
     name: 'Cafeteria',
+    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
     fillColor: '#87DF6A',
     color: 'white',
     hoverColor: '#17202A',

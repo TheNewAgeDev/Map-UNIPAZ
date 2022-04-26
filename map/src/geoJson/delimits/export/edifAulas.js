@@ -1,7 +1,8 @@
 const HTML = `
-  <div class="center">
-    <h3>{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/edifAulas.JPG" alt="Edificio de Aulas" />
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/edifAulas.jpg" alt="Edificio de Aulas" />
+    <p>{{ description }}</p>
   </div>
 `
 
@@ -128,6 +129,7 @@ export const EDIF_AULAS = {
   id: 'a9e3804d-07cb-4e2d-86a2-2cd402386e5b',
   properties: {
     name: 'Edificio de Aulas',
+    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
     html: HTML,
     fillColor: '#87DF6A',
     color: 'white',

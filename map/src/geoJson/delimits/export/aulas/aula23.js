@@ -25,6 +25,7 @@ export const AULA_23 = {
   id: '986a8acb-211a-4079-98a6-056d4d6e110b',
   properties: {
     name: 'Aula 23',
+    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
     fillColor: '#87DF6A',
     color: 'white',
     hoverColor: '#17202A',

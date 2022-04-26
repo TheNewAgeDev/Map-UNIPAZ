@@ -15,6 +15,7 @@ export const PARQUEADERO_ADMIN_1 = {
   id: '6caae6d9-af00-4a2c-b927-fe53eae63045',
   properties: {
     name: 'Parqueadero Administrativo 1',
+    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
     fillColor: '#87DF6A',
     color: 'white',
     hoverColor: '#17202A',

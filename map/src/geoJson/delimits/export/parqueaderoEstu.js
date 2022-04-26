@@ -15,6 +15,7 @@ export const PARQUEADERO_ESTUDIANTIL = {
   id: 'eceb6281-b1e0-4b54-a5cd-e9f521cbee76',
   properties: {
     name: 'Parqueadero Estudiantil',
+    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
     fillColor: '#87DF6A',
     color: 'white',
     hoverColor: '#17202A',

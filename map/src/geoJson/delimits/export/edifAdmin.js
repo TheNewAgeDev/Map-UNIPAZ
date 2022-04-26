@@ -37,6 +37,7 @@ export const EDIF_ADMIN = {
   id: '2059baf0-b2d5-49f2-b9b3-cf22e312b4d9',
   properties: {
     name: 'Area Administrativa, Departamentos y Escuelas',
+    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
     fillColor: '#87DF6A',
     color: 'white',
     hoverColor: '#17202A',

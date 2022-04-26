@@ -15,6 +15,7 @@ export const ROTONDA = {
   id: '956ba5b6-6180-4d8c-971e-1eb04bbb9c3a',
   properties: {
     name: 'Rotonda',
+    description: 'Edificio de Aulas - Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.',
     fillColor: '#87DF6A',
     color: 'white',
     hoverColor: '#17202A',
