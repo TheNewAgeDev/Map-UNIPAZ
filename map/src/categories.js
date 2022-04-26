@@ -9,6 +9,38 @@ const CATEGORIES = {
     hoverFillColor: '#87DF6A',
     opacity: 0.5,
     hoverOpacity: 0.7
+  },
+  AULAS: {
+    color: 'white',
+    hoverColor: '#17202A',
+    fillColor: '#E3F469',
+    hoverFillColor: '#C4D25D',
+    opacity: 0.5,
+    hoverOpacity: 0.7
+  },
+  PARQUEADERO: {
+    color: 'white',
+    hoverColor: '#17202A',
+    fillColor: '#F69D5F',
+    hoverFillColor: '#E29D6D',
+    opacity: 0.5,
+    hoverOpacity: 0.7
+  },
+  LABORATORIO: {
+    color: 'white',
+    hoverColor: '#17202A',
+    fillColor: '#6DE2D0',
+    hoverFillColor: '#53B0A1',
+    opacity: 0.5,
+    hoverOpacity: 0.7
+  },
+  CANCHA: {
+    color: 'white',
+    hoverColor: '#17202A',
+    fillColor: '#F6D0A9',
+    hoverFillColor: '#E3B890',
+    opacity: 0.5,
+    hoverOpacity: 0.7
   }
 }
 

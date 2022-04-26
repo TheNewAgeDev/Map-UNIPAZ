@@ -25,6 +25,6 @@ export const LABORATORIO_ANATOMIA = {
   id: '20c94bcb-c063-4be7-bd98-bd4cf210c7e4',
   properties: {
     name: 'Laboratorio De Anatomía',
-    category: 'default'
+    category: 'Laboratorio'
   }
 }

@@ -3,7 +3,7 @@ const OPTIONS = {
   id: '5b986427-b620-4602-bcdf-9db4f169f6f0',
   properties: {
     name: 'Parqueadero Administrativo 2',
-    category: 'default'
+    category: 'Parqueadero'
   }
 }
 

@@ -15,6 +15,6 @@ export const PARQUEADERO_ESTUDIANTIL = {
   id: 'eceb6281-b1e0-4b54-a5cd-e9f521cbee76',
   properties: {
     name: 'Parqueadero Estudiantil',
-    category: 'default'
+    category: 'Parqueadero'
   }
 }

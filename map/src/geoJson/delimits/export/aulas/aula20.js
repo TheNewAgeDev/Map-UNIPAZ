@@ -25,6 +25,6 @@ export const AULA_20 = {
   id: 'eadd3fdb-368a-40f9-8357-59185316c3be',
   properties: {
     name: 'Aula 20',
-    category: 'default'
+    category: 'Aulas'
   }
 }

@@ -15,6 +15,6 @@ export const CANCHA_VOLEY_1 = {
   id: 'e43222ed-b1c4-40dd-8e10-2834b2779d78',
   properties: {
     name: 'Cancha Voleibol 1',
-    category: 'default'
+    category: 'Cancha'
   }
 }

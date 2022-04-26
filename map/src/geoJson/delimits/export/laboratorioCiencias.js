@@ -49,6 +49,6 @@ export const LABORATIO_CIENCIAS = {
   id: '06db2af3-d269-4ba0-b9cc-7373062519a3',
   properties: {
     name: 'Laboratorio Ciencias Basicas',
-    category: 'default'
+    category: 'Laboratorio'
   }
 }

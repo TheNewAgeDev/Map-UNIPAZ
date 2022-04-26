@@ -37,6 +37,6 @@ export const LABORATORIO_PRODUCCION = {
   id: '24518d9c-5b39-48c6-8414-238bc4ea3067',
   properties: {
     name: 'Laboratorio De Producción',
-    category: 'default'
+    category: 'Laboratorio'
   }
 }

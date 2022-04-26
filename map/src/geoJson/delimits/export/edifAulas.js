@@ -129,7 +129,7 @@ export const EDIF_AULAS = {
   id: 'a9e3804d-07cb-4e2d-86a2-2cd402386e5b',
   properties: {
     name: 'Edificio de Aulas',
-    category: 'default',
+    category: 'Aulas',
     html: HTML
   }
 }

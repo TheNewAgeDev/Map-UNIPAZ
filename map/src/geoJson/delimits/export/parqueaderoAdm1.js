@@ -15,6 +15,6 @@ export const PARQUEADERO_ADMIN_1 = {
   id: '6caae6d9-af00-4a2c-b927-fe53eae63045',
   properties: {
     name: 'Parqueadero Administrativo 1',
-    category: 'default'
+    category: 'Parqueadero'
   }
 }
