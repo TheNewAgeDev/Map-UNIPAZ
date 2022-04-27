@@ -1,6 +1,8 @@
 import { map, L } from './leaflet'
 import { DELIMITS_ARRAY } from './geoJson/unipaz'
 
+import { selectStyle } from './categories'
+
 const LOCATIONS_NAMES = []
 
 DELIMITS_ARRAY.forEach(function (item) {
@@ -57,6 +59,7 @@ selectLocation.addEventListener('change', async function (e) {
   }
 
   selectedLocation = L.geoJson(geoJsonLocation, {
+    style: selectStyle,
     onEachFeature
   })
 

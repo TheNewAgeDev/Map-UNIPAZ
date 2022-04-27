@@ -1,6 +1,3 @@
-import { UNIPAZ } from './graphMap'
-import { info } from './info'
-
 const CATEGORIES = {
   DEFAULT: {
     color: 'white',
@@ -44,7 +41,9 @@ const CATEGORIES = {
   }
 }
 
-export function styleHover (e) {
+export async function styleHover (e) {
+  const { info } = await import('./info')
+
   const layer = e.target
   const properties = layer.feature.properties
 
@@ -61,7 +60,10 @@ export function styleHover (e) {
   info?.update(properties)
 }
 
-export function resetStyleHover (e) {
+export async function resetStyleHover (e) {
+  const { info } = await import('./info')
+  const { UNIPAZ } = await import('./graphMap')
+
   UNIPAZ.resetStyle(e.target)
 
   info?.update()
@@ -77,5 +79,15 @@ export const styleDefault = (feature) => {
     opacity: category.opacity,
     color: category.color,
     dashArray: '3'
+  }
+}
+
+export const selectStyle = (feature) => {
+  const category = CATEGORIES[feature.properties.category.toUpperCase()] || CATEGORIES.DEFAULT
+
+  return {
+    fillColor: category.fillColor,
+    weight: 4,
+    color: '#2874A6'
   }
 }
