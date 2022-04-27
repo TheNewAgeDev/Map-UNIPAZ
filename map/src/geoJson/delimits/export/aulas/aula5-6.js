@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/6.jpg" alt="Aula 5 y 6" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const AULA5_6 = {
   type: 'Feature',
   geometry: {
@@ -28,6 +36,7 @@ export const AULA5_6 = {
   id: 'f256806f-0f51-4834-8676-e8cdc07694b0',
   properties: {
     name: 'Aula 5 y 6',
-    category: 'Aulas'
+    category: 'Aulas',
+    html: HTML
   }
 }

@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/parqEstud.jpg" alt="Parqueadero Estudiantil" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const PARQUEADERO_ESTUDIANTIL = {
   type: 'Feature',
   geometry: {
@@ -15,6 +23,7 @@ export const PARQUEADERO_ESTUDIANTIL = {
   id: 'eceb6281-b1e0-4b54-a5cd-e9f521cbee76',
   properties: {
     name: 'Parqueadero Estudiantil',
-    category: 'Parqueadero'
+    category: 'Parqueadero',
+    html: HTML
   }
 }

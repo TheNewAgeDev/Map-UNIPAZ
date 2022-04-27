@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/plazoleta.jpg" alt="Plazoleta de la Paz" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const PLAZOLETA = {
   type: 'Feature',
   geometry: {
@@ -31,6 +39,7 @@ export const PLAZOLETA = {
   id: '9671f54c-a98c-4dc9-9322-f87e9bf9bdac',
   properties: {
     name: 'Plazoleta de la Paz',
-    category: 'default'
+    category: 'default',
+    html: HTML
   }
 }

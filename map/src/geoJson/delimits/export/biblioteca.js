@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/biblioteca.jpg" alt="Biblioteca, Auditorio, Salas de Informatica" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const BIBLIOTECA = {
   type: 'Feature',
   geometry: {
@@ -37,6 +45,7 @@ export const BIBLIOTECA = {
   id: 'f4df7b39-2337-427b-b7bd-b0135985d433',
   properties: {
     name: 'Biblioteca, Auditorio, Salas de Informatica',
-    category: 'default'
+    category: 'default',
+    html: HTML
   }
 }

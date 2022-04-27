@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/laboratorioCiencias.jpg" alt="Laboratorio Ciencias Basicas" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const LABORATIO_CIENCIAS = {
   type: 'Feature',
   geometry: {
@@ -49,6 +57,7 @@ export const LABORATIO_CIENCIAS = {
   id: '06db2af3-d269-4ba0-b9cc-7373062519a3',
   properties: {
     name: 'Laboratorio Ciencias Basicas',
-    category: 'Laboratorio'
+    category: 'Laboratorio',
+    html: HTML
   }
 }

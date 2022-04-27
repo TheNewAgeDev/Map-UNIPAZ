@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/gimnasio.jpg" alt="Gimnasio" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const GIMNASIO = {
   type: 'Feature',
   geometry: {
@@ -15,6 +23,7 @@ export const GIMNASIO = {
   id: 'a47bae9a-cfb6-4f45-8901-10545345c82d',
   properties: {
     name: 'Gimnasio',
-    category: 'default'
+    category: 'default',
+    html: HTML
   }
 }

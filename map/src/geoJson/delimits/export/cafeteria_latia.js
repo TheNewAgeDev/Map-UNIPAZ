@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/cafeteriaTia.jpg" alt="Cafeteria La Tia" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const CAFETERIA_LATIA = {
   type: 'Feature',
   geometry: {
@@ -49,6 +57,7 @@ export const CAFETERIA_LATIA = {
   id: 'a037b8dc-fb5d-472c-9cd7-f62877680356',
   properties: {
     name: 'Cafeteria La Tia',
-    category: 'default'
+    category: 'default',
+    html: HTML
   }
 }

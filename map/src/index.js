@@ -1,7 +1,8 @@
 import './styles/main.css'
 
 const load = document.createElement('div')
-load.innerHTML = 'Cargando...'
+load.classList.add('loader')
+load.innerHTML = '<div class="load"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>'
 
 document.getElementById('map').appendChild(load)
 

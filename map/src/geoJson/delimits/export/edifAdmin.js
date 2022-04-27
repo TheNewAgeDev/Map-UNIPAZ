@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/areaAdmin.jpg" alt="Area Administrativa, Departamentos y Escuelas" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const EDIF_ADMIN = {
   type: 'Feature',
   geometry: {
@@ -37,6 +45,7 @@ export const EDIF_ADMIN = {
   id: '2059baf0-b2d5-49f2-b9b3-cf22e312b4d9',
   properties: {
     name: 'Area Administrativa, Departamentos y Escuelas',
-    category: 'default'
+    category: 'default',
+    html: HTML
   }
 }

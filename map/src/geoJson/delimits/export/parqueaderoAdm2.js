@@ -1,9 +1,17 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/parqAdmin2.jpg" alt="Parqueadero Administrativo 2" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
 
 const OPTIONS = {
   id: '5b986427-b620-4602-bcdf-9db4f169f6f0',
   properties: {
     name: 'Parqueadero Administrativo 2',
-    category: 'Parqueadero'
+    category: 'Parqueadero',
+    html: HTML
   }
 }
 

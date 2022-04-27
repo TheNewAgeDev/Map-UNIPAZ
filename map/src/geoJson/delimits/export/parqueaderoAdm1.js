@@ -1,3 +1,11 @@
+const HTML = `
+  <div class="center content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+    <img class="images-popup" src="/images/delimit/parqAdmin1.jpg" alt="Parqueadero Administrativo 1" />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+  </div>
+`
+
 export const PARQUEADERO_ADMIN_1 = {
   type: 'Feature',
   geometry: {
@@ -15,6 +23,7 @@ export const PARQUEADERO_ADMIN_1 = {
   id: '6caae6d9-af00-4a2c-b927-fe53eae63045',
   properties: {
     name: 'Parqueadero Administrativo 1',
-    category: 'Parqueadero'
+    category: 'Parqueadero',
+    html: HTML
   }
 }

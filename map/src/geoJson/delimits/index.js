@@ -7,7 +7,7 @@ export * from './export/plazoleta'
 
 export * from './export/gimnasio'
 export * from './export/salonJuegos'
-export * from './export/canchavoley'
+export * from './export/canchaVoley'
 export * from './export/rotonda'
 
 export * from './export/cafeteria_latia'
