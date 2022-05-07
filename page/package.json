@@ -7,14 +7,14 @@
     "copy:map": "cpy ../map/dist/** ../page/public && npm run rename",
     "copy": "cpy dist/index.html --rename=200.html .",
     "build": "rimraf dist && vite build && npm run copy",
-    "deploy": "rimraf public && npm run copy:map && npm run build && surge dist --domain https://map-unipaz.surge.sh",
+    "deploy": "rimraf public && npm run copy:map && npm run build && surge dist --domain https://unimapz.surge.sh",
     "preview": "vite preview"
   },
   "dependencies": {
     "html-to-react": "1.4.8",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "prismjs": "1.27.0"
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "prismjs": "1.28.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "1.3.1"

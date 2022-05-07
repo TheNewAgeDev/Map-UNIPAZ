@@ -5,41 +5,49 @@ import '../customPlugins/switchBasemap'
 import { getConfigStorage, setConfigStorage } from './storage'
 import { MARK_LOCATIONS } from './graphMap'
 
-const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Dark Mode'
+const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Por Defecto'
+const EXCLUDE_LAYERS = ['Draw']
+const EXCLUDE_SETTINGS = ['url', 'icon']
 
 export const LAYERS = {
   'Por Defecto': {
     url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    id: 'default',
     icon: '/images/viewDefaultMode.png'
   },
   'Dark Mode': {
-    url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
-    id: 'dark',
-    icon: '/images/viewDarkMode.png'
+    url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key={api_key}',
+    icon: '/images/viewDarkMode.png',
+    api_key: import.meta.env.VITE_STADIATOKEN
   },
   'Satelital': {
     url: 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
     id: 'mapbox/satellite-v9',
     icon: '/images/viewSatelitalMode.png',
-    token: import.meta.env.VITE_MAPBOXTOKEN
+    accessToken: import.meta.env.VITE_MAPBOXTOKEN
+  },
+  'Draw': {
+    url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'
   }
 }
 
-const ATTRIBUTION = '© <a target="_blank" href="https://map-unipaz.surge.sh/">Mapa Unipaz</a>'
+const ATTRIBUTION = '© <a target="_blank" href="https://unimapz.surge.sh/">UNIMAPZ</a>'
 
 /* Creación de las Capas */
 
 const LAYERS_DEFINE = []
 
 Object.entries(LAYERS).forEach(([key, value]) => {
+  if (EXCLUDE_LAYERS.includes(key)) return
+
   const SETTINGS = {
-    id: value.id || '',
-    accessToken: value.token || '',
-    subdomains: value.subdomains || 'abc',
-    attribution: ATTRIBUTION,
-    name: key
+    name: key,
+    attribution: ATTRIBUTION
   }
+
+  Object.entries(value).forEach(([key2, value2]) => {
+    if (EXCLUDE_SETTINGS.includes(key2)) return
+    SETTINGS[key2] = value2
+  })
 
   const newLayer = L.tileLayer(value.url, SETTINGS)
 

@@ -1,4 +1,4 @@
-# Unimapz: Mapa de Instituto Universitario de la Paz - Unipaz
+# UNIMAPZ: Mapa de Instituto Universitario de la Paz - Unipaz
 
 # Contributors
 
