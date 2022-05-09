@@ -11,6 +11,7 @@ body {
 #map {
   height: 100%;
   width: 100%;
+  background: #fff;
 }
 
 .loader {
@@ -97,6 +98,15 @@ body {
   top: 56px;
   left: 12px;
 }
+
+.dark #map {
+  background: rgba(0, 0, 0, 0.692);
+}
+
+.dark .load div, .dark .load div:after {
+  background: rgb(255, 255, 255);
+}
+
 @keyframes load {
   0% {
     transform: rotate(0deg);

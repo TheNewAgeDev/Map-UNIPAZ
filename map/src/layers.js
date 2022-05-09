@@ -71,4 +71,9 @@ L.control.layers.minimap(LAYERS_DEFINE, {
 
 map.on('layeradd', ({ layer }) => {
   setConfigStorage({ defaultLayer: layer.options.name })
+
+  const htmlClass = document.documentElement.classList
+  if (!LAYERS[layer.options.name]) return
+
+  layer.options.name === 'Dark Mode' ? htmlClass.add('dark') : htmlClass.remove('dark')
 })
