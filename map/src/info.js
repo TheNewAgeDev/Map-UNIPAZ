@@ -65,6 +65,10 @@ const getMessage = (properties) => {
   })
 }
 
+export const sidebar = L.control.sidebar('sidebar', {
+  position: 'left'
+}).addTo(map)
+
 export const onEachFeature = (feature, layer) => {
   layer.on({
     mouseover: styleHover,
@@ -76,5 +80,8 @@ export const onEachFeature = (feature, layer) => {
     ? getMessage(feature.properties)
     : `<strong>Edificio</strong>: ${feature.properties.name}`
 
-  layer.bindPopup(message)
+  layer.on('click', () => {
+    sidebar.setContent(message)
+    sidebar.show()
+  })
 }

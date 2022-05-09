@@ -9,7 +9,7 @@ const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Por Defecto'
 const EXCLUDE_LAYERS = ['Draw']
 const EXCLUDE_SETTINGS = ['url', 'icon']
 
-export const LAYERS = {
+const LAYERS = {
   'Por Defecto': {
     url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     icon: '/images/viewDefaultMode.png'

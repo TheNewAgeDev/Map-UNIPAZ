@@ -1,12 +1,20 @@
 import './styles/main.css'
 
+const map = document.getElementById('map')
+
 const load = document.createElement('div')
 load.classList.add('loader')
 load.innerHTML = '<div class="load"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>'
 
-document.getElementById('map').appendChild(load)
+map.appendChild(load)
+
+const sidebar = document.createElement('div')
+sidebar.id = 'sidebar'
 
 window.onload = async () => {
+  map.appendChild(sidebar)
+
   await import('./layers')
-  document.getElementById('map').removeChild(load)
+
+  map.removeChild(load)
 }

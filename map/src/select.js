@@ -42,6 +42,7 @@ let time = null
 
 selectLocation.addEventListener('change', async function (e) {
   const { onEachFeature } = await import('./info')
+
   if (selectedLocation) {
     selectedLocation.remove()
     time && clearTimeout(time)
@@ -65,7 +66,7 @@ selectLocation.addEventListener('change', async function (e) {
 
   selectedLocation.addTo(map)
   selectedLocation.eachLayer(function (layer) {
-    layer.openPopup()
+    layer.fire('click')
   })
 
   map.flyTo(selectedLocation.getBounds().getCenter(), 18)
