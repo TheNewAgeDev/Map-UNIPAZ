@@ -64,12 +64,12 @@ selectLocation.addEventListener('change', async function (e) {
     onEachFeature
   })
 
+  map.flyTo(selectedLocation.getBounds().getCenter(), 18)
+
   selectedLocation.addTo(map)
   selectedLocation.eachLayer(function (layer) {
     layer.fire('click')
   })
-
-  map.flyTo(selectedLocation.getBounds().getCenter(), 18)
 
   time = setTimeout(() => {
     if (selectedLocation) selectedLocation.remove()

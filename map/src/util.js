@@ -1,3 +1,5 @@
+import circleToGeoJson from 'circle-to-polygon'
+
 function isMobile () {
   return (
     (navigator.userAgent.match(/Android/i)) ||
@@ -10,3 +12,7 @@ function isMobile () {
 }
 
 export const isMobileNow = isMobile()
+
+export function getGeoJsonFromCircle (coordinates, radius, numberOfPoints = 32) {
+  return circleToGeoJson(coordinates, radius, numberOfPoints)
+}
