@@ -132,15 +132,16 @@
 
 .leaflet-sidebar > .leaflet-control {
   background: white;
-  background: rgba(255, 255, 255, 0.897);
+  background: rgba(255, 255, 255, 0.537);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.129);
+  backdrop-filter: blur(5px);
 
   border: 0.5px solid #ccc;
   border-radius: 5px;
 }
 
 .dark .leaflet-sidebar > .leaflet-control {
-  background: rgba(0, 0, 0, 0.66);
+  background: rgba(0, 0, 0, 0.368);
   color: #fff;
 }
 
@@ -169,4 +170,20 @@
 .close:hover {
   cursor: pointer;
   color: rgb(115, 115, 160);
+}
+
+@media (max-width: 768px) {
+  .title-popup {
+    margin-top: 35px;
+  }
+
+  .dark .leaflet-sidebar > .leaflet-control {
+    background: rgba(0, 0, 0, 0.838);
+    color: #fff;
+  }
+
+  .leaflet-sidebar > .leaflet-control {
+    background: rgba(255, 255, 255, 0.733);
+    border-radius: 0px;
+  }
 }
