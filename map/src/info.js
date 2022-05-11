@@ -4,6 +4,8 @@ import { resetStyleHover, styleHover } from './categories'
 
 import { getConfigStorage, setConfigStorage } from './storage'
 
+import { isMobileNow } from './util'
+
 /* Muestra la Información como Hover */
 
 export const info = L.control()
@@ -28,13 +30,14 @@ info.update = function (props) {
   `
 }
 
-getConfigStorage()?.showInfo && info.addTo(map)
+if (!isMobileNow) getConfigStorage()?.showInfo && info.addTo(map)
 
 map.on('overlayadd', function (eo) {
   if (eo.name === 'InformaciónUnipaz') {
-    info.addTo(map)
+    if (!isMobileNow) info.addTo(map)
     setConfigStorage({ showInfo: true })
   }
+
   if (eo.name === 'Retorno') setConfigStorage({ retorno: true })
 })
 
@@ -43,6 +46,7 @@ map.on('overlayremove', function (eo) {
     info.remove()
     setConfigStorage({ showInfo: false })
   }
+
   if (eo.name === 'Retorno') setConfigStorage({ retorno: false })
 })
 

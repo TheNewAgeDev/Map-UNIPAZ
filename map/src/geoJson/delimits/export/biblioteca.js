@@ -2,7 +2,11 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/biblioteca.jpg" alt="Biblioteca, Auditorio, Salas de Informatica" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officia ut iusto, perferendis magnam autem vitae est neque beatae facilis, nesciunt distinctio id quam sint quia minus eius. Quia eos consequuntur repudiandae nesciunt iure tempora, quas laudantium non expedita, ea esse voluptate ex amet nihil ad vero sed. Fugiat voluptates harum nostrum natus eaque consectetur quisquam porro molestias magnam vitae itaque sapiente officia, atque magni voluptatem velit totam esse, ut debitis laudantium minima omnis illum quas. Mollitia dignissimos blanditiis, sequi ipsam fuga iste quos tempora excepturi quidem laudantium odit id aut nobis quod maiores nihil doloribus itaque quam cupiditate? Omnis.
+     <br /><br />
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officia ut iusto, perferendis magnam autem vitae est neque beatae facilis, nesciunt distinctio id quam sint quia minus eius. Quia eos consequuntur repudiandae nesciunt iure tempora, quas laudantium non expedita, ea esse voluptate ex amet nihil ad vero sed. Fugiat voluptates harum nostrum natus eaque consectetur quisquam porro molestias magnam vitae itaque sapiente officia, atque magni voluptatem velit totam esse, ut debitis laudantium minima omnis illum quas. Mollitia dignissimos blanditiis, sequi ipsam fuga iste quos tempora excepturi quidem laudantium odit id aut nobis quod maiores nihil doloribus itaque quam cupiditate? Omnis.
+    </p>
   </div>
 `
 

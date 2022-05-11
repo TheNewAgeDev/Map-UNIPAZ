@@ -1,5 +1,7 @@
 const CATEGORIES = {
   DEFAULT: {
+    name: 'Default',
+
     color: 'white',
     hoverColor: '#17202A',
     fillColor: '#87DF6A',
@@ -8,6 +10,8 @@ const CATEGORIES = {
     hoverOpacity: 0.7
   },
   AULAS: {
+    name: 'Aulas',
+
     color: 'white',
     hoverColor: '#17202A',
     fillColor: '#E3F469',
@@ -16,6 +20,8 @@ const CATEGORIES = {
     hoverOpacity: 0.7
   },
   PARQUEADERO: {
+    name: 'Parqueadero',
+
     color: 'white',
     hoverColor: '#17202A',
     fillColor: '#F69D5F',
@@ -24,6 +30,8 @@ const CATEGORIES = {
     hoverOpacity: 0.7
   },
   LABORATORIO: {
+    name: 'Laboratorio',
+
     color: 'white',
     hoverColor: '#17202A',
     fillColor: '#6DE2D0',
@@ -32,6 +40,8 @@ const CATEGORIES = {
     hoverOpacity: 0.7
   },
   CANCHA: {
+    name: 'Cancha',
+
     color: 'white',
     hoverColor: '#17202A',
     fillColor: '#F6D0A9',

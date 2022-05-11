@@ -61,7 +61,7 @@ Object.entries(LAYERS).forEach(([key, value]) => {
 LAYERS_DEFINE.find(layer => layer.name === DEFAULT_LAYER).layer.addTo(map)
 
 L.control.layers(null, MARK_LOCATIONS, {
-  position: 'bottomright',
+  position: 'bottomleft',
   collapsed: false
 }).addTo(map)
 
