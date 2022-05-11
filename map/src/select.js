@@ -39,12 +39,14 @@ select.addTo(map)
 const selectLocation = document.getElementById('select-location')
 let selectedLocation = null
 let time = null
+let marker = null
 
 selectLocation.addEventListener('change', async function (e) {
   const { onEachFeature } = await import('./info')
 
   if (selectedLocation) {
     selectedLocation.remove()
+    if (marker) marker.remove()
     time && clearTimeout(time)
   }
 
@@ -66,6 +68,9 @@ selectLocation.addEventListener('change', async function (e) {
 
   map.flyTo(selectedLocation.getBounds().getCenter(), 18)
 
+  marker = L.marker(selectedLocation.getBounds().getCenter())
+  marker.addTo(map)
+
   selectedLocation.addTo(map)
   selectedLocation.eachLayer(function (layer) {
     layer.fire('click')
@@ -73,6 +78,7 @@ selectLocation.addEventListener('change', async function (e) {
 
   time = setTimeout(() => {
     if (selectedLocation) selectedLocation.remove()
+    if (marker) marker.remove()
     selectLocation.value = 'default'
-  }, 10000)
+  }, 5000)
 })
