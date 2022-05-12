@@ -1,4 +1,4 @@
-import { L } from '../src/leaflet'
+import { L } from '../../src/leaflet'
 
 import './switchBasemap.css'
 

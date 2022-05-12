@@ -1,9 +1,10 @@
 /* eslint-disable quote-props */
 import { map, L } from './leaflet'
+
 import '../customPlugins/switchBasemap'
+import './graphMap'
 
 import { getConfigStorage, setConfigStorage } from './storage'
-import { MARK_LOCATIONS } from './graphMap'
 
 const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Por Defecto'
 const EXCLUDE_LAYERS = ['Draw']
@@ -59,11 +60,6 @@ Object.entries(LAYERS).forEach(([key, value]) => {
 })
 
 LAYERS_DEFINE.find(layer => layer.name === DEFAULT_LAYER).layer.addTo(map)
-
-L.control.layers(null, MARK_LOCATIONS, {
-  position: 'bottomleft',
-  collapsed: false
-}).addTo(map)
 
 L.control.layers.minimap(LAYERS_DEFINE, {
   position: 'bottomright'
