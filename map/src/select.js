@@ -79,6 +79,7 @@ selectLocation.addEventListener('change', async function (e) {
   time = setTimeout(() => {
     if (selectedLocation) selectedLocation.remove()
     if (marker) marker.remove()
+
     selectLocation.value = 'default'
   }, 5000)
 })

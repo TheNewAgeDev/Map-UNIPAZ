@@ -12,8 +12,6 @@ const CODE = `
 const HTML = Prism.highlight(CODE, Prism.languages.html, 'html')
 
 const App = () => {
-  console.log(HTML)
-
   return (
     <>
       <Header />
