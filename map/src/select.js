@@ -73,7 +73,7 @@ selectLocation.addEventListener('change', async function (e) {
 
   selectedLocation.addTo(map)
   selectedLocation.eachLayer(function (layer) {
-    layer.fire('click')
+    layer.fire('click', { isSelect: true })
   })
 
   time = setTimeout(() => {

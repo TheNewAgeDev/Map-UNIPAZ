@@ -18,6 +18,7 @@ RETORNO.on('add', () => {
     if (!isFirtsTime) map.flyTo(RETORNO.getLatLng(), 18)
   } else {
     map.flyTo(RETORNO.getLatLng(), 18)
+    RETORNO.fire('click')
   }
   isFirtsTime = false
 })

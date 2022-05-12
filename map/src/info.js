@@ -73,7 +73,7 @@ export const sidebar = L.control.sidebar('sidebar', {
   position: 'left'
 }).addTo(map)
 
-export const onEachFeature = (feature, layer) => {
+export const onEachFeature = async (feature, layer) => {
   layer.on({
     mouseover: styleHover,
     mouseout: resetStyleHover,
@@ -84,8 +84,12 @@ export const onEachFeature = (feature, layer) => {
     ? getMessage(feature.properties)
     : `<strong>Edificio</strong>: ${feature.properties.name}`
 
-  layer.on('click', () => {
+  layer.on('click', async ({ isSelect }) => {
+    const { waitFor } = await import('./util')
+
     sidebar.setContent(message)
+
+    if (!sidebar.isVisible() && isSelect) await waitFor(500)
     sidebar.show()
   })
 }

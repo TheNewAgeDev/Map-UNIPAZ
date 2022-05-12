@@ -16,3 +16,5 @@ export const isMobileNow = isMobile()
 export function getGeoJsonFromCircle (coordinates, radius, numberOfPoints = 32) {
   return circleToGeoJson(coordinates, radius, numberOfPoints)
 }
+
+export const waitFor = (ms) => new Promise(resolve => setTimeout(resolve, ms))
