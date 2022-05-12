@@ -2,7 +2,7 @@
 import { map, L } from './leaflet'
 import { resetStyleHover, styleHover } from './categories'
 
-import { getConfigStorage, setConfigStorage } from './storage'
+import { getConfigStorage } from './storage'
 
 import { isMobileNow } from './util'
 
@@ -31,24 +31,6 @@ info.update = function (props) {
 }
 
 if (!isMobileNow) getConfigStorage()?.showInfo && info.addTo(map)
-
-map.on('overlayadd', function (eo) {
-  if (eo.name === 'InformaciónUnipaz') {
-    if (!isMobileNow) info.addTo(map)
-    setConfigStorage({ showInfo: true })
-  }
-
-  if (eo.name === 'Retorno') setConfigStorage({ retorno: true })
-})
-
-map.on('overlayremove', function (eo) {
-  if (eo.name === 'InformaciónUnipaz') {
-    info.remove()
-    setConfigStorage({ showInfo: false })
-  }
-
-  if (eo.name === 'Retorno') setConfigStorage({ retorno: false })
-})
 
 /* Muestra la Información Desplegada */
 
