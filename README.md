@@ -15,7 +15,7 @@ Mapa del Instituto Universitario de la Paz - Unipaz 🕊
 - [Breinner Rueda](https://github.com/DasCode-Brm)
 - [Bryan Muñoz](https://github.com/BryanSMC)
 - [Aldair Caballero](https://github.com/ItzAlda1)
-- Javier Rodriguez
+- [Javier Rodriguez](https://github.com/xavi-1521)
 
 ## 📃 Licencia
 
