@@ -7,7 +7,7 @@ import './select'
 import { onEachFeature } from './info'
 import { styleDefault, CATEGORIES } from './categories'
 import { UNIPAZ_CATEGORIES } from './geoJson/unipaz'
-import { capitalizeString } from './util'
+import { capitalizeString, isMobileNow } from './util'
 
 import '../customPlugins/leyend'
 
@@ -18,13 +18,13 @@ const RETORNO = L.marker([7.071283672458979, -73.73667776584625])
 
 let isFirtsTime = true
 RETORNO.on('add', () => {
-  if (configStorage?.retorno) {
-    if (!isFirtsTime) map.flyTo(RETORNO.getLatLng(), 18)
-  } else {
-    map.flyTo(RETORNO.getLatLng(), 18)
-    RETORNO.fire('click')
+  if (isFirtsTime) {
+    isFirtsTime = false
+    if (configStorage?.retorno) return
   }
-  isFirtsTime = false
+
+  map.flyTo(RETORNO.getLatLng(), 18)
+  RETORNO.fire('click')
   setConfigStorage({ retorno: true })
 })
 
@@ -67,9 +67,9 @@ Object.entries(UNIPAZ_CATEGORIES).forEach(([key, value]) => {
 export const legend = L.control.Legend({
   title: 'Categorías',
   position: 'bottomleft',
-  collapsed: false,
+  collapsed: !!isMobileNow,
   symbolWidth: 24,
-  opacity: 0.5,
+  opacity: 0.2,
   column: 2,
   legends: [
     {
