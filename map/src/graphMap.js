@@ -1,12 +1,13 @@
+/* eslint-disable array-element-newline */
 import { map, L } from './leaflet'
 
 import { getConfigStorage, setConfigStorage } from './storage'
 
 import './select'
-import { info, onEachFeature } from './info'
-import { styleDefault } from './categories'
-import { UNIPAZ_LOCATIONS } from './geoJson/unipaz'
-import { isMobileNow } from './util'
+import { onEachFeature } from './info'
+import { styleDefault, CATEGORIES } from './categories'
+import { UNIPAZ_CATEGORIES } from './geoJson/unipaz'
+import { capitalizeString } from './util'
 
 import '../customPlugins/leyend'
 
@@ -31,23 +32,37 @@ RETORNO.on('remove', () => {
   setConfigStorage({ retorno: false })
 })
 
-export const UNIPAZ = L.geoJson(UNIPAZ_LOCATIONS, {
-  onEachFeature,
-  style: styleDefault
-})
-
-UNIPAZ.on('add', () => {
-  if (!isMobileNow) info.addTo(map)
-  setConfigStorage({ showInfo: true })
-})
-
-UNIPAZ.on('remove', () => {
-  info.remove()
-  setConfigStorage({ showInfo: false })
-})
-
 configStorage?.retorno && RETORNO.addTo(map)
-configStorage?.showInfo && UNIPAZ.addTo(map)
+
+const CATEGORY_LEGEND = []
+
+Object.entries(UNIPAZ_CATEGORIES).forEach(([key, value]) => {
+  const category = CATEGORIES[key]
+  if (key === 'DEFAULT') key = 'No Especificada'
+
+  const DELIMIT_CATEGORY = L.geoJson(value, {
+    onEachFeature,
+    style: styleDefault
+  }).addTo(map)
+
+  DELIMIT_CATEGORY.on('add', () => {
+    map.flyTo(DELIMIT_CATEGORY.getBounds().getCenter(), 18)
+  })
+
+  const newCategory = {
+    label: capitalizeString(`${key}s`),
+    type: 'rectangle',
+    radius: 5,
+    color: '#000',
+    fillColor: category.fillColor,
+    fillOpacity: 0.6,
+    weight: 2,
+    layers: DELIMIT_CATEGORY,
+    inactive: false
+  }
+
+  CATEGORY_LEGEND.push(newCategory)
+})
 
 export const legend = L.control.Legend({
   title: 'Categorías',
@@ -55,28 +70,19 @@ export const legend = L.control.Legend({
   collapsed: false,
   symbolWidth: 24,
   opacity: 0.5,
-  column: 1,
+  column: 2,
   legends: [
     {
-      label: 'Información',
-      type: 'circle',
-      radius: 5,
-      color: 'blue',
-      fillColor: '#33F',
-      fillOpacity: 0.6,
-      weight: 2,
-      layers: UNIPAZ,
-      inactive: !configStorage?.retorno
-    }, {
       label: 'Retorno',
       type: 'circle',
       radius: 5,
-      color: 'blue',
-      fillColor: '#33F',
+      color: '#000',
+      fillColor: '#000',
       fillOpacity: 0.6,
       weight: 2,
       layers: RETORNO,
       inactive: !configStorage?.showInfo
-    }
+    },
+    ...CATEGORY_LEGEND
   ]
 }).addTo(map)

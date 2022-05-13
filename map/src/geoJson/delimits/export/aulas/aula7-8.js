@@ -33,7 +33,7 @@ export const AULA7_8 = {
   id: '19796027-77a1-43ac-b72c-fa09c735103b',
   properties: {
     name: 'Aula 7 y 8',
-    category: 'Aulas',
+    category: 'Aula',
     html: HTML
   }
 }

@@ -6,7 +6,7 @@ import styles from './app.module.css'
 import Header from '../Header'
 
 const CODE = `
-<iframe width='100%' height='100%' src='https://map-unipaz.surge.sh/map'></iframe>
+<iframe width='100%' height='100%' src='https://unimapz.surge.sh/map'></iframe>
 `
 
 const HTML = Prism.highlight(CODE, Prism.languages.html, 'html')

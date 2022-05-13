@@ -1,4 +1,4 @@
-const CATEGORIES = {
+export const CATEGORIES = {
   DEFAULT: {
     name: 'Default',
 
@@ -9,7 +9,7 @@ const CATEGORIES = {
     opacity: 0.5,
     hoverOpacity: 0.7
   },
-  AULAS: {
+  AULA: {
     name: 'Aulas',
 
     color: 'white',
@@ -72,9 +72,20 @@ export async function styleHover (e) {
 
 export async function resetStyleHover (e) {
   const { info } = await import('./info')
-  const { UNIPAZ } = await import('./graphMap')
 
-  UNIPAZ.resetStyle(e.target)
+  const layer = e.target
+  const properties = layer.feature.properties
+
+  const category = CATEGORIES[properties.category.toUpperCase()] || CATEGORIES.DEFAULT
+
+  layer.setStyle({
+    fillColor: category.fillColor,
+    fillOpacity: 0.6,
+    weight: 2,
+    opacity: category.opacity,
+    color: category.color,
+    dashArray: '3'
+  })
 
   info?.update()
 }

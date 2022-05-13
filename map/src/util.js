@@ -18,3 +18,7 @@ export function getGeoJsonFromCircle (coordinates, radius, numberOfPoints = 32) 
 }
 
 export const waitFor = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+export const capitalizeString = (str) => {
+  return str.toLowerCase().replace(/\b(\w)/g, s => s.toUpperCase())
+}
