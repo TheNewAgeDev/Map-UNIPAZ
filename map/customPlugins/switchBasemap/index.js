@@ -1,5 +1,7 @@
 import { L } from '../../src/leaflet'
 
+import { isMobileNow } from '../../src/util'
+
 import './switchBasemap.css'
 
 L.Control.Layers.BasemapsSwitcher = L.Control.Layers.extend({
@@ -18,18 +20,34 @@ L.Control.Layers.BasemapsSwitcher = L.Control.Layers.extend({
     this._createItems()
     this._collapse()
 
-    this.container.addEventListener('mouseover', () => {
-      this._expand()
-    })
+    if (!isMobileNow) {
+      this.container.addEventListener('mouseover', () => {
+        this._expand()
+      })
 
-    this.container.addEventListener('mouseout', () => {
-      this._collapse()
-    })
+      this.container.addEventListener('mouseout', () => {
+        this._collapse()
+      })
+    } else {
+      let isClicked = false
+
+      this.container.addEventListener('click', () => {
+        if (!isClicked) {
+          isClicked = true
+          this._expand()
+        } else {
+          isClicked = false
+          this._collapse()
+        }
+      })
+    }
 
     return this.container
   },
 
   _createItems () {
+    let isClick = false
+
     this.layers.forEach((obj, index) => {
       obj.id = index
 
@@ -50,6 +68,9 @@ L.Control.Layers.BasemapsSwitcher = L.Control.Layers.extend({
       img.append(name)
 
       imgContainer.addEventListener('click', () => {
+        if (isMobileNow) isClick = !isClick
+        if (isClick && isMobileNow) return
+
         this._removeLayers(obj.layer)
 
         if (!obj.layer?._map) {
