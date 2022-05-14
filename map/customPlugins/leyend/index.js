@@ -201,10 +201,7 @@ L.Control.Legend = L.Control.extend({
   },
   setLegends (legends) {
     this.options.legends = legends
-
-    setTimeout(() => {
-      this.redraw()
-    }, 50)
+    this.redraw()
   },
 
   initialize: function (options) {
@@ -215,6 +212,8 @@ L.Control.Legend = L.Control.extend({
 
   onAdd: function (map) {
     this.setLegends = this.setLegends.bind(this)
+    this.redraw = this.redraw.bind(this)
+
     this._map = map
     this._initLayout()
     return this._container
@@ -362,21 +361,23 @@ L.Control.Legend = L.Control.extend({
   },
 
   redraw: function () {
-    L.DomUtil.empty(this._contents)
+    setTimeout(() => {
+      L.DomUtil.empty(this._contents)
 
-    const title = L.DomUtil.create('h3', 'leaflet-legend-title', this._contents)
-    title.innerText = this.options.title || ''
+      const title = L.DomUtil.create('h3', 'leaflet-legend-title', this._contents)
+      title.innerText = this.options.title || ''
 
-    const len = this.options.legends.length
-    const colSize = Math.ceil(len / this.options.column)
-    let legendContainer = this._contents
-    for (let i = 0; i < len; i++) {
-      if (i % colSize === 0) {
-        legendContainer = L.DomUtil.create('div', 'leaflet-legend-column', this._contents)
+      const len = this.options.legends.length
+      const colSize = Math.ceil(len / this.options.column)
+      let legendContainer = this._contents
+      for (let i = 0; i < len; i++) {
+        if (i % colSize === 0) {
+          legendContainer = L.DomUtil.create('div', 'leaflet-legend-column', this._contents)
+        }
+        const legend = this.options.legends[i]
+        this._buildLegendItems(legendContainer, legend)
       }
-      const legend = this.options.legends[i]
-      this._buildLegendItems(legendContainer, legend)
-    }
+    }, 50)
   }
 })
 

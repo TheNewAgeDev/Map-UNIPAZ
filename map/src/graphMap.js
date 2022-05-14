@@ -1,10 +1,10 @@
 /* eslint-disable array-element-newline */
-import { map, L } from './leaflet'
+import { map, L, CENTER } from './leaflet'
 
 import { getConfigStorage, setConfigStorage } from './storage'
 
 import './select'
-import { onEachFeature } from './info'
+import { info, onEachFeature } from './info'
 import { styleDefault, CATEGORIES } from './categories'
 import { UNIPAZ_CATEGORIES } from './geoJson/unipaz'
 import { capitalizeString, isMobileNow } from './util'
@@ -56,7 +56,7 @@ const DEFAULT_LEGENDS = [{
   layers: RETORNO
 }]
 
-Object.entries(UNIPAZ_CATEGORIES).forEach(([key, value]) => {
+Object.entries(UNIPAZ_CATEGORIES).forEach(async ([key, value]) => {
   const category = CATEGORIES[key]
   if (key === 'DEFAULT') key = 'No Especificada'
 
@@ -69,6 +69,10 @@ Object.entries(UNIPAZ_CATEGORIES).forEach(([key, value]) => {
     map.flyTo(DELIMIT_CATEGORY.getBounds().getCenter(), 18)
   })
 
+  DELIMIT_CATEGORY.on('remove', () => {
+    DELIMIT_CATEGORY.remove()
+  })
+
   const newCategory = {
     label: capitalizeString(`${key}s`),
     type: 'rectangle',
@@ -77,8 +81,7 @@ Object.entries(UNIPAZ_CATEGORIES).forEach(([key, value]) => {
     fillColor: category.fillColor,
     fillOpacity: 0.6,
     weight: 2,
-    layers: DELIMIT_CATEGORY,
-    inactive: false
+    layers: DELIMIT_CATEGORY
   }
 
   CATEGORY_LEGEND.push(newCategory)
@@ -92,6 +95,11 @@ function toggleCategories (noToggle = false) {
   DEFAULT_LEGENDS[0].inactive = !showInfo
   DEFAULT_LEGENDS[1].inactive = !config?.retorno
 
+  CATEGORY_LEGEND.forEach(category => {
+    category.inactive = !showInfo
+    showInfo ? category.layers.addTo(map) : category.layers.remove()
+  })
+
   legend.setLegends(showInfo
     ? [
         ...DEFAULT_LEGENDS,
@@ -99,7 +107,16 @@ function toggleCategories (noToggle = false) {
       ]
     : DEFAULT_LEGENDS)
 
-  if (!noToggle) setConfigStorage({ showInfo })
+  if (showInfo) {
+    if (!isMobileNow) info.addTo(map)
+  } else {
+    info.remove()
+  }
+
+  if (!noToggle) {
+    setConfigStorage({ showInfo })
+    showInfo && map.flyTo(CENTER, 17)
+  }
 }
 
 const legend = L.control.Legend({

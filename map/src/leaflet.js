@@ -9,7 +9,7 @@ import 'leaflet-sidebar/src/L.Control.Sidebar.css'
 
 import './styles/leaflet-custom.css'
 
-const CENTER = [7.06758, -73.74541] // Centro de UNIPAZ
+export const CENTER = [7.06758, -73.74541] // Centro de UNIPAZ
 const BOUNDS = [
   // south west         // north east
   [7.05492, -73.75344], [7.07401, -73.73359]
