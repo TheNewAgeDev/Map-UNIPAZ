@@ -35,6 +35,26 @@ RETORNO.on('remove', () => {
 configStorage?.retorno && RETORNO.addTo(map)
 
 const CATEGORY_LEGEND = []
+const DEFAULT_LEGENDS = [{
+  label: 'Información',
+  type: 'circle',
+  radius: 5,
+  color: '#000',
+  fillColor: '#000',
+  fillOpacity: 0.6,
+  weight: 2,
+  exec: toggleCategories
+},
+{
+  label: 'Retorno',
+  type: 'circle',
+  radius: 5,
+  color: '#000',
+  fillColor: '#000',
+  fillOpacity: 0.6,
+  weight: 2,
+  layers: RETORNO
+}]
 
 Object.entries(UNIPAZ_CATEGORIES).forEach(([key, value]) => {
   const category = CATEGORIES[key]
@@ -64,25 +84,31 @@ Object.entries(UNIPAZ_CATEGORIES).forEach(([key, value]) => {
   CATEGORY_LEGEND.push(newCategory)
 })
 
-export const legend = L.control.Legend({
+function toggleCategories (noToggle = false) {
+  const config = getConfigStorage()
+  let showInfo = config?.showInfo
+  if (!noToggle) showInfo = !showInfo
+
+  DEFAULT_LEGENDS[0].inactive = !showInfo
+  DEFAULT_LEGENDS[1].inactive = !config?.retorno
+
+  legend.setLegends(showInfo
+    ? [
+        ...DEFAULT_LEGENDS,
+        ...CATEGORY_LEGEND
+      ]
+    : DEFAULT_LEGENDS)
+
+  if (!noToggle) setConfigStorage({ showInfo })
+}
+
+const legend = L.control.Legend({
   title: 'Categorías',
   position: 'bottomleft',
   collapsed: !!isMobileNow,
   symbolWidth: 24,
   opacity: 0.2,
-  column: 2,
-  legends: [
-    {
-      label: 'Retorno',
-      type: 'circle',
-      radius: 5,
-      color: '#000',
-      fillColor: '#000',
-      fillOpacity: 0.6,
-      weight: 2,
-      layers: RETORNO,
-      inactive: !configStorage?.showInfo
-    },
-    ...CATEGORY_LEGEND
-  ]
+  column: 2
 }).addTo(map)
+
+toggleCategories(true)

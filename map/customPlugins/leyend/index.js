@@ -192,11 +192,19 @@ L.Control.Legend = L.Control.extend({
     position: 'topleft',
     title: 'Legend',
     legends: [],
+    exec: null,
     symbolWidth: 24,
     symbolHeight: 24,
     opacity: 1.0,
     column: 1,
     collapsed: false
+  },
+  setLegends (legends) {
+    this.options.legends = legends
+
+    setTimeout(() => {
+      this.redraw()
+    }, 50)
   },
 
   initialize: function (options) {
@@ -206,6 +214,7 @@ L.Control.Legend = L.Control.extend({
   },
 
   onAdd: function (map) {
+    this.setLegends = this.setLegends.bind(this)
     this._map = map
     this._initLayout()
     return this._container
@@ -221,7 +230,7 @@ L.Control.Legend = L.Control.extend({
     this._link.href = '#'
 
     const title = L.DomUtil.create('h3', 'leaflet-legend-title', this._contents)
-    title.innerText = this.options.title || 'Legend'
+    title.innerText = this.options.title || ''
 
     const len = this.options.legends.length
     const colSize = Math.ceil(len / this.options.column)
@@ -237,21 +246,21 @@ L.Control.Legend = L.Control.extend({
 
   _buildLegendItems: function (legendContainer, legend) {
     const legendItemDiv = L.DomUtil.create('div', 'leaflet-legend-item', legendContainer)
-    if (legend.inactive) {
+    if (legend?.inactive) {
       L.DomUtil.addClass(legendItemDiv, 'leaflet-legend-item-inactive')
     }
     const symbolContainer = L.DomUtil.create('i', null, legendItemDiv)
 
     let legendSymbol
-    if (legend.type === 'image') {
+    if (legend?.type === 'image') {
       legendSymbol = new ImageSymbol(this, symbolContainer, legend)
-    } else if (legend.type === 'circle') {
+    } else if (legend?.type === 'circle') {
       legendSymbol = new CircleSymbol(this, symbolContainer, legend)
-    } else if (legend.type === 'rectangle') {
+    } else if (legend?.type === 'rectangle') {
       legendSymbol = new RectangleSymbol(this, symbolContainer, legend)
-    } else if (legend.type === 'polygon') {
+    } else if (legend?.type === 'polygon') {
       legendSymbol = new PolygonSymbol(this, symbolContainer, legend)
-    } else if (legend.type === 'polyline') {
+    } else if (legend?.type === 'polyline') {
       legendSymbol = new PolylineSymbol(this, symbolContainer, legend)
     } else {
       L.DomUtil.remove(legendItemDiv)
@@ -263,7 +272,7 @@ L.Control.Legend = L.Control.extend({
     symbolContainer.style.height = this.options.symbolHeight + 'px'
 
     const legendLabel = L.DomUtil.create('span', null, legendItemDiv)
-    legendLabel.innerText = legend.label
+    legendLabel.innerText = legend.label || ''
     if (legend.layers) {
       L.DomUtil.addClass(legendItemDiv, 'leaflet-legend-item-clickable')
       L.DomEvent.on(
@@ -271,6 +280,24 @@ L.Control.Legend = L.Control.extend({
         'click',
         function () {
           this._toggleLegend.call(this, legendItemDiv, legend.layers)
+        },
+        this
+      )
+    }
+
+    if (legend.exec) {
+      L.DomUtil.addClass(legendItemDiv, 'leaflet-legend-item-clickable')
+      L.DomEvent.on(
+        legendItemDiv,
+        'click',
+        function () {
+          if (L.DomUtil.hasClass(legendItemDiv, 'leaflet-legend-item-inactive')) {
+            L.DomUtil.removeClass(legendItemDiv, 'leaflet-legend-item-inactive')
+          } else {
+            L.DomUtil.addClass(legendItemDiv, 'leaflet-legend-item-inactive')
+          }
+
+          legend.exec.call(this)
         },
         this
       )
@@ -336,7 +363,20 @@ L.Control.Legend = L.Control.extend({
 
   redraw: function () {
     L.DomUtil.empty(this._contents)
-    this._buildLegendItems()
+
+    const title = L.DomUtil.create('h3', 'leaflet-legend-title', this._contents)
+    title.innerText = this.options.title || ''
+
+    const len = this.options.legends.length
+    const colSize = Math.ceil(len / this.options.column)
+    let legendContainer = this._contents
+    for (let i = 0; i < len; i++) {
+      if (i % colSize === 0) {
+        legendContainer = L.DomUtil.create('div', 'leaflet-legend-column', this._contents)
+      }
+      const legend = this.options.legends[i]
+      this._buildLegendItems(legendContainer, legend)
+    }
   }
 })
 
