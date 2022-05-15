@@ -1,18 +1,18 @@
 export const CATEGORIES = {
   DEFAULT: {
-    name: 'Default',
+    name: 'No Especificadas',
 
-    color: 'white',
+    color: '#17202A',
     hoverColor: '#17202A',
-    fillColor: '#87DF6A',
-    hoverFillColor: '#87DF6A',
+    fillColor: '#F5B041',
+    hoverFillColor: '#eba96f',
     opacity: 0.5,
     hoverOpacity: 0.7
   },
   AULA: {
     name: 'Aulas',
 
-    color: 'white',
+    color: '#17202A',
     hoverColor: '#17202A',
     fillColor: '#E3F469',
     hoverFillColor: '#C4D25D',
@@ -20,9 +20,9 @@ export const CATEGORIES = {
     hoverOpacity: 0.7
   },
   PARQUEADERO: {
-    name: 'Parqueadero',
+    name: 'Parqueaderos',
 
-    color: 'white',
+    color: '#17202A',
     hoverColor: '#17202A',
     fillColor: '#F69D5F',
     hoverFillColor: '#E29D6D',
@@ -30,22 +30,43 @@ export const CATEGORIES = {
     hoverOpacity: 0.7
   },
   LABORATORIO: {
-    name: 'Laboratorio',
+    name: 'Laboratorios',
 
-    color: 'white',
+    color: '#17202A',
     hoverColor: '#17202A',
     fillColor: '#6DE2D0',
     hoverFillColor: '#53B0A1',
     opacity: 0.5,
     hoverOpacity: 0.7
   },
-  CANCHA: {
-    name: 'Cancha',
+  RECREACION: {
+    name: 'Recreación',
 
-    color: 'white',
+    color: '#17202A',
     hoverColor: '#17202A',
-    fillColor: '#F6D0A9',
-    hoverFillColor: '#E3B890',
+    fillColor: '#87DF6A',
+    hoverFillColor: '#87DF6A',
+    opacity: 0.5,
+    hoverOpacity: 0.7
+  },
+  INFRAESTRUCTURA: {
+    name: 'Infraestructuras',
+
+    color: '#17202A',
+    hoverColor: '#17202A',
+    fillColor: '#cea46f',
+    hoverFillColor: '#eba96f',
+    opacity: 0.6,
+    hoverOpacity: 0.7,
+    weight: 3
+  },
+  CAFETERIA: {
+    name: 'Cafeterías',
+
+    color: '#17202A',
+    hoverColor: '#17202A',
+    fillColor: '#8c5e6f',
+    hoverFillColor: '#8c5e99',
     opacity: 0.5,
     hoverOpacity: 0.7
   }
@@ -60,7 +81,7 @@ export async function styleHover (e) {
   const category = CATEGORIES[properties.category.toUpperCase()] || CATEGORIES.DEFAULT
 
   layer.setStyle({
-    weight: 2,
+    weight: category.weight || 2,
     fillColor: category.hoverFillColor,
     color: category.hoverColor,
     dashArray: '3',
@@ -81,7 +102,7 @@ export async function resetStyleHover (e) {
   layer.setStyle({
     fillColor: category.fillColor,
     fillOpacity: 0.6,
-    weight: 2,
+    weight: category.weight || 2,
     opacity: category.opacity,
     color: category.color,
     dashArray: '3'
@@ -96,7 +117,7 @@ export const styleDefault = (feature) => {
   return {
     fillColor: category.fillColor,
     fillOpacity: 0.6,
-    weight: 2,
+    weight: category.weight || 2,
     opacity: category.opacity,
     color: category.color,
     dashArray: '3'
@@ -109,6 +130,7 @@ export const selectStyle = (feature) => {
   return {
     fillColor: category.fillColor,
     weight: 4,
-    color: '#2874A6'
+    color: '#3882ff',
+    opacity: 0.7
   }
 }

@@ -8,7 +8,7 @@ export * from './export/plazoleta'
 export * from './export/gimnasio'
 export * from './export/salonJuegos'
 export * from './export/canchaVoley'
-export * from './export/rotonda'
+export * from './export/canchaMicro'
 
 export * from './export/cafeteria_latia'
 export * from './export/cafeteria'
@@ -20,6 +20,14 @@ export * from './export/parqueaderoEstu'
 export * from './export/laboratorioProduccion'
 export * from './export/laboratorioAnatomia'
 export * from './export/laboratorioCiencias'
+
+export * from './export/vivero'
+
+export * from './export/puentePeatonal'
+export * from './export/rotonda'
+export * from './export/almacenElect'
+export * from './export/compElect1'
+export * from './export/compElect2'
 
 export * from './export/aulas/aula1-2'
 export * from './export/aulas/aula3'

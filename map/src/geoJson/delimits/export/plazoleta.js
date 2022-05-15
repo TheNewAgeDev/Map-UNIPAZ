@@ -39,7 +39,7 @@ export const PLAZOLETA = {
   id: '9671f54c-a98c-4dc9-9322-f87e9bf9bdac',
   properties: {
     name: 'Plazoleta de la Paz',
-    category: 'default',
+    category: 'Infraestructura',
     html: HTML
   }
 }

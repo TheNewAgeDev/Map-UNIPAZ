@@ -23,7 +23,7 @@ export const GIMNASIO = {
   id: 'a47bae9a-cfb6-4f45-8901-10545345c82d',
   properties: {
     name: 'Gimnasio',
-    category: 'default',
+    category: 'Recreacion',
     html: HTML
   }
 }

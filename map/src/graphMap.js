@@ -7,7 +7,7 @@ import './select'
 import { info, onEachFeature } from './info'
 import { styleDefault, CATEGORIES } from './categories'
 import { UNIPAZ_CATEGORIES } from './geoJson/unipaz'
-import { capitalizeString, isMobileNow } from './util'
+import { isMobileNow } from './util'
 
 import '../customPlugins/leyend'
 
@@ -58,7 +58,6 @@ const DEFAULT_LEGENDS = [{
 
 Object.entries(UNIPAZ_CATEGORIES).forEach(async ([key, value]) => {
   const category = CATEGORIES[key]
-  if (key === 'DEFAULT') key = 'No Especificada'
 
   const DELIMIT_CATEGORY = L.geoJson(value, {
     onEachFeature,
@@ -74,7 +73,7 @@ Object.entries(UNIPAZ_CATEGORIES).forEach(async ([key, value]) => {
   })
 
   const newCategory = {
-    label: capitalizeString(`${key}s`),
+    label: category.name,
     type: 'rectangle',
     radius: 5,
     color: '#000',

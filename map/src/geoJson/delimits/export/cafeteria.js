@@ -25,7 +25,7 @@ export const CAFETERIA = {
   id: 'c755bda3-f8ee-496d-9e67-a3a43bb83b1a',
   properties: {
     name: 'Cafeteria',
-    category: 'default',
+    category: 'cafeteria',
     html: HTML
   }
 }

@@ -12,8 +12,9 @@ const EXCLUDE_SETTINGS = ['url', 'icon']
 
 const LAYERS = {
   'Por Defecto': {
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    icon: '/images/viewDefaultMode.png'
+    url: 'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png?api_key={api_key}',
+    icon: '/images/viewDefaultMode.png',
+    api_key: import.meta.env.VITE_STADIATOKEN
   },
   'Dark Mode': {
     url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key={api_key}',
@@ -27,7 +28,7 @@ const LAYERS = {
     accessToken: import.meta.env.VITE_MAPBOXTOKEN
   },
   'Draw': {
-    url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
   }
 }
 

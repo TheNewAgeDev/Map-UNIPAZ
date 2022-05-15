@@ -57,7 +57,7 @@ export const CAFETERIA_LATIA = {
   id: 'a037b8dc-fb5d-472c-9cd7-f62877680356',
   properties: {
     name: 'Cafeteria La Tia',
-    category: 'default',
+    category: 'cafeteria',
     html: HTML
   }
 }

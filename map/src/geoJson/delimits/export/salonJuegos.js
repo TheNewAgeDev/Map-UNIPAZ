@@ -33,7 +33,7 @@ export const JUEGOS = {
   id: '5f2609d1-5236-49b5-b2ec-7492380483d2',
   properties: {
     name: 'Salón de Juegos',
-    category: 'default',
+    category: 'Recreacion',
     html: HTML
   }
 }
