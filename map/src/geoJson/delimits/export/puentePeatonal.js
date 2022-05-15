@@ -31,6 +31,10 @@ export const PUENTE = {
   properties: {
     name: 'Puente Peatonal',
     category: 'Infraestructura',
-    html: HTML
+    html: HTML,
+
+    color: 'yellow',
+    weight: 4,
+    opacity: 0.4
   }
 }

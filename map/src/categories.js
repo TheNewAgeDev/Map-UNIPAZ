@@ -5,7 +5,7 @@ export const CATEGORIES = {
     color: '#17202A',
     hoverColor: '#17202A',
     fillColor: '#F5B041',
-    hoverFillColor: '#eba96f',
+    hoverFillColor: '#F5A041',
     opacity: 0.5,
     hoverOpacity: 0.7
   },
@@ -45,7 +45,7 @@ export const CATEGORIES = {
     color: '#17202A',
     hoverColor: '#17202A',
     fillColor: '#87DF6A',
-    hoverFillColor: '#87DF6A',
+    hoverFillColor: '#87D05A',
     opacity: 0.5,
     hoverOpacity: 0.7
   },
@@ -56,9 +56,8 @@ export const CATEGORIES = {
     hoverColor: '#17202A',
     fillColor: '#cea46f',
     hoverFillColor: '#eba96f',
-    opacity: 0.6,
-    hoverOpacity: 0.7,
-    weight: 3
+    opacity: 0.5,
+    hoverOpacity: 0.7
   },
   CAFETERIA: {
     name: 'Cafeterías',
@@ -72,60 +71,59 @@ export const CATEGORIES = {
   }
 }
 
+function getCategory (props) {
+  return CATEGORIES[props.category.toUpperCase()] || CATEGORIES.DEFAULT
+}
+
+function addStyleDefault (props) {
+  const category = getCategory(props)
+
+  return {
+    fillColor: category.fillColor,
+    fillOpacity: 0.6,
+    weight: props.weight || category.weight || 2,
+    opacity: props.opacity || category.opacity,
+    color: props.color || category.color,
+    dashArray: '3'
+  }
+}
+
 export async function styleHover (e) {
   const { info } = await import('./info')
 
   const layer = e.target
-  const properties = layer.feature.properties
-
-  const category = CATEGORIES[properties.category.toUpperCase()] || CATEGORIES.DEFAULT
+  const props = layer.feature.properties
+  const category = getCategory(props)
 
   layer.setStyle({
-    weight: category.weight || 2,
+    weight: props.weight || category.weight || 2,
     fillColor: category.hoverFillColor,
     color: category.hoverColor,
     dashArray: '3',
     opacity: category.hoverOpacity
   })
 
-  info?.update(properties)
+  info?.update(props)
 }
 
 export async function resetStyleHover (e) {
   const { info } = await import('./info')
 
   const layer = e.target
-  const properties = layer.feature.properties
+  const props = layer.feature.properties
 
-  const category = CATEGORIES[properties.category.toUpperCase()] || CATEGORIES.DEFAULT
-
-  layer.setStyle({
-    fillColor: category.fillColor,
-    fillOpacity: 0.6,
-    weight: category.weight || 2,
-    opacity: category.opacity,
-    color: category.color,
-    dashArray: '3'
-  })
-
+  layer.setStyle(addStyleDefault(props))
   info?.update()
 }
 
 export const styleDefault = (feature) => {
-  const category = CATEGORIES[feature.properties.category.toUpperCase()] || CATEGORIES.DEFAULT
-
-  return {
-    fillColor: category.fillColor,
-    fillOpacity: 0.6,
-    weight: category.weight || 2,
-    opacity: category.opacity,
-    color: category.color,
-    dashArray: '3'
-  }
+  const props = feature.properties
+  return addStyleDefault(props)
 }
 
 export const selectStyle = (feature) => {
-  const category = CATEGORIES[feature.properties.category.toUpperCase()] || CATEGORIES.DEFAULT
+  const props = feature.properties
+  const category = getCategory(props)
 
   return {
     fillColor: category.fillColor,
