@@ -1,31 +1,38 @@
 /* eslint-disable quote-props */
-import { map, L } from './leaflet'
+import { map, L } from '@/leaflet'
 
-import '../customPlugins/switchBasemap'
-import './graphMap'
+import '#/customPlugins/switchBasemap'
+import '@/graphMap'
 
-import { getConfigStorage, setConfigStorage } from './storage'
+import { getConfigStorage, setConfigStorage } from '@/storage'
 
 const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Por Defecto'
 const EXCLUDE_LAYERS = ['Draw']
-const EXCLUDE_SETTINGS = ['url', 'icon']
+const EXCLUDE_SETTINGS = [
+  'url',
+  'icon',
+  'attribution'
+]
 
 const LAYERS = {
   'Por Defecto': {
     url: 'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png?api_key={api_key}',
     icon: '/images/viewDefaultMode.png',
-    api_key: import.meta.env.VITE_STADIATOKEN
+    api_key: import.meta.env.VITE_STADIATOKEN,
+    attribution: 'Stadia Maps'
   },
   'Dark Mode': {
     url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key={api_key}',
     icon: '/images/viewDarkMode.png',
-    api_key: import.meta.env.VITE_STADIATOKEN
+    api_key: import.meta.env.VITE_STADIATOKEN,
+    attribution: 'Stadia Maps'
   },
   'Satelital': {
     url: 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
     id: 'mapbox/satellite-v9',
     icon: '/images/viewSatelitalMode.png',
-    accessToken: import.meta.env.VITE_MAPBOXTOKEN
+    accessToken: import.meta.env.VITE_MAPBOXTOKEN,
+    attribution: 'Mapbox satelital 2015'
   },
   'Draw': {
     url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
@@ -43,7 +50,7 @@ Object.entries(LAYERS).forEach(([key, value]) => {
 
   const SETTINGS = {
     name: key,
-    attribution: ATTRIBUTION
+    attribution: `${value.attribution} | ${ATTRIBUTION}`
   }
 
   Object.entries(value).forEach(([key2, value2]) => {
@@ -54,8 +61,8 @@ Object.entries(LAYERS).forEach(([key, value]) => {
   const newLayer = L.tileLayer(value.url, SETTINGS)
 
   LAYERS_DEFINE.push({
-    layer: newLayer,
     name: key,
+    layer: newLayer,
     icon: value.icon || ''
   }) // Se guarda en el objeto de capas
 })

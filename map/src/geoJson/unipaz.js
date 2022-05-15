@@ -1,5 +1,5 @@
 import * as DELIMITS from './delimits'
-import { CATEGORIES } from '../categories'
+import { CATEGORIES } from '@/categories'
 
 export const DELIMITS_ARRAY = []
 

@@ -1,10 +1,10 @@
 /* eslint-disable no-return-assign */
-import { map, L } from './leaflet'
-import { resetStyleHover, styleHover } from './categories'
+import { map, L } from '@/leaflet'
+import { resetStyleHover, styleHover } from '@/categories'
 
-import { getConfigStorage } from './storage'
+import { getConfigStorage } from '@/storage'
 
-import { isMobileNow } from './util'
+import { isMobileNow } from '@/util'
 
 /* Muestra la Información como Hover */
 
@@ -39,14 +39,14 @@ function zoomToFeature (e) {
 }
 
 const getMessage = (properties) => {
-  const { name, categorie, html } = properties
+  const { name, category, html } = properties
 
   const mapObj = {
     '{{ title }}': name,
-    '{{ categorie }}': categorie
+    '{{ category }}': category
   }
 
-  return html.replace(/{{ title }}|{{ categorie }}/gi, function (matched) {
+  return html.replace(/{{ title }}|{{ category }}/gi, function (matched) {
     return mapObj[matched]
   })
 }

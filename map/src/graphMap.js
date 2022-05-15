@@ -1,15 +1,15 @@
 /* eslint-disable array-element-newline */
-import { map, L, CENTER } from './leaflet'
+import { map, L, CENTER } from '@/leaflet'
 
-import { getConfigStorage, setConfigStorage } from './storage'
+import { getConfigStorage, setConfigStorage } from '@/storage'
 
-import './select'
-import { info, onEachFeature } from './info'
-import { styleDefault, CATEGORIES } from './categories'
-import { UNIPAZ_CATEGORIES } from './geoJson/unipaz'
-import { isMobileNow } from './util'
+import '@/select'
+import { info, onEachFeature } from '@/info'
+import { styleDefault, CATEGORIES } from '@/categories'
+import { UNIPAZ_CATEGORIES } from '@/geoJson/unipaz'
+import { isMobileNow } from '@/util'
 
-import '../customPlugins/leyend'
+import '#/customPlugins/legend'
 
 const configStorage = getConfigStorage()
 

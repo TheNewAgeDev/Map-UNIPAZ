@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
+import { resolve as resolvePath } from 'path'
+
 export default defineConfig({
   publicDir: 'assets',
   plugins: [
@@ -10,8 +12,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': 'src',
-      '#': './'
+      '@': resolvePath(__dirname, './src'),
+      '#': resolvePath(__dirname, './')
     }
   }
 })

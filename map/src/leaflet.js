@@ -7,7 +7,7 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import 'leaflet-sidebar/src/L.Control.Sidebar'
 import 'leaflet-sidebar/src/L.Control.Sidebar.css'
 
-import './styles/leaflet-custom.css'
+import '@/styles/leaflet-custom.css'
 
 export const CENTER = [7.06758, -73.74541] // Centro de UNIPAZ
 const BOUNDS = [

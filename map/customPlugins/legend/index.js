@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-call */
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable no-undef */
-import { L } from '../../src/leaflet'
+import { L } from '@/leaflet'
 
 import './leaflet.legend.css'
 

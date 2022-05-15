@@ -1,7 +1,7 @@
-import { map, L } from './leaflet'
-import { DELIMITS_ARRAY } from './geoJson/unipaz'
+import { map, L } from '@/leaflet'
+import { DELIMITS_ARRAY } from '@/geoJson/unipaz'
 
-import { selectStyle } from './categories'
+import { selectStyle } from '@/categories'
 
 const LOCATIONS_NAMES = []
 

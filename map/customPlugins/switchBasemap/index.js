@@ -1,6 +1,6 @@
-import { L } from '../../src/leaflet'
+import { L } from '@/leaflet'
 
-import { isMobileNow } from '../../src/util'
+import { isMobileNow } from '@/util'
 
 import './switchBasemap.css'
 
