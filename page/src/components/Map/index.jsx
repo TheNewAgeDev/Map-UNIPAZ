@@ -10,7 +10,7 @@ const Map = () => {
 
   useEffect(() => {
     const loadFile = async () => {
-      const __html = await import('../../../public/map.html?raw')
+      const __html = await import('#/public/map.html?raw')
       setTemplate({ __html: __html.default })
     }
 

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import App from './components/App'
-import Map from './components/Map'
+import App from '@/components/App'
+import Map from '@/components/Map'
 
 const RouterComponent = () => {
   const [page] = useState(() => {
@@ -17,7 +17,7 @@ const RouterComponent = () => {
     }
 
     return (
-      <div>
+      <div className=''>
         <h1>Pagina no Encontrada | 404</h1>
       </div>
     )

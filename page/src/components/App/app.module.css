@@ -3,56 +3,17 @@
   height: 100%;
   margin: 0 auto;
 
-  padding: 2rem 0;
+  padding-top: 2rem;
 
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  text-align: center;
 }
 
-.app a {
-  width: 100%;
-  height: 4rem;
-
-  background: #2193b0;
-  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
-  background: linear-gradient(to right, #6dd5ed, #2193b0);
-
-  border: none;
-  border-radius: 0.5rem;
-
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-
-  color: #ffffff;
-
-  text-transform: uppercase;
-  cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.app a:hover {
-  background: #2193b0;
-  background: -webkit-linear-gradient(to left, #63a4b2, #53a9be);
-  background: linear-gradient(to left, #63a4b2, #53a9be);
-}
-
-.app iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 60vh;
-
-  border: 0;
-  border-radius: 0.5rem;
-}
-
-.code {
-  margin-top: 2rem;
-  padding: 2rem;
-  border-radius: 25px;
-  background-color: #b5babb84;
+@media (max-width: 768px) {
+  .app {
+    width: 100%;
+  }
 }
