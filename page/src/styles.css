@@ -10,7 +10,10 @@ body, html {
   width: 100%;
 
   font-size: 14px;
-  background-color: #ffffff;
+}
+
+body {
+  background-color: #bfe5ee16;
 }
 
 a {
