@@ -18,7 +18,7 @@ const BOUNDS = [
 const CONFIG_LEAFLET = {
   center: CENTER,
   zoom: 17,
-  minZoom: 14,
+  minZoom: 16,
   attributionControl: true,
   maxBounds: BOUNDS
 }
