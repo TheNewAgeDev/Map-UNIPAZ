@@ -1,7 +1,9 @@
+import styles from './footer.module.css'
+
 const Footer = () => {
   return (
-    <div>
-      Footer
+    <div className={styles.footer}>
+      UNIMAPZ - 2022
     </div>
   )
 }

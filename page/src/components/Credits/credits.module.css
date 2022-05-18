@@ -1,0 +1,11 @@
+.credits {
+  width: 100%;
+
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.credits-color {
+  color: rgb(8, 64, 61);
+}
