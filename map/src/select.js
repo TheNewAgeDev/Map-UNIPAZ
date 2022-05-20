@@ -61,7 +61,7 @@ selectLocation.addEventListener('change', async function (e) {
     ]
   }
 
-  selectedLocation = L.geoJson(geoJsonLocation, {
+  selectedLocation = L.geoJSON(geoJsonLocation, {
     style: selectStyle,
     onEachFeature
   })

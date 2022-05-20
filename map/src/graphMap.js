@@ -59,7 +59,7 @@ const DEFAULT_LEGENDS = [{
 Object.entries(UNIPAZ_CATEGORIES).forEach(async ([key, value]) => {
   const category = CATEGORIES[key]
 
-  const DELIMIT_CATEGORY = L.geoJson(value, {
+  const DELIMIT_CATEGORY = L.geoJSON(value, {
     onEachFeature,
     style: styleDefault
   }).addTo(map)
