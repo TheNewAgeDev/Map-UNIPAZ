@@ -11,13 +11,13 @@
     "move-compress": "move-file map/map.zip map/dist/map.zip",
     "compress": "bestzip map/map.zip map/dist/** && npm run move-compress",
     "build": "rimraf map/dist && npm run build --workspace=map && npm run compress",
-    "build:page": "npm run build && npm run build --workspace=page",
+    "build:page": "npm run build && npm run build --workspace=page && move-file page/dist ./dist",
 
     "co": "npm run lint && git add . && sui-mono commit",
     "lint": "eslint .",
     "dev": "npm run dev --workspace=map",
     "dev:page": "npm run build && npm run dev --workspace=page",
-    "deploy": "npm run build && npm run deploy --workspace=page",
+    "deploy": "npm run build && npm run deploy --workspace=page && move-file page/dist ./dist && surge dist --domain https://unimapz.surge.sh",
 
     "preview": "npm run preview --workspace=page"
   },
