@@ -42,7 +42,7 @@ VITE_STADIATOKEN = "" // puede obtener el token en https://stadiamaps.com/
 npm run dev
 ```
 
-- Ejecuta la pagina de forma local
+- Ejecuta la página de forma local
 ```bash
 npm run dev:page
 ```
@@ -50,6 +50,11 @@ npm run dev:page
 - Genera el código de producción del mapa
 ```bash
 npm run build
+```
+
+- Genera el código de producción de la página
+```bash
+npm run build:page
 ```
 
 ## 👩‍💻 Contribuidores

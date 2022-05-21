@@ -2,12 +2,14 @@
   "name": "page",
   "private": true,
   "scripts": {
-    "dev": "rimraf public && npm run copy:map && vite",
     "rename": "node -e \"require('fs').rename('public/index.html', 'public/map.html', function(err) { if (err) console.log(err); console.log('File successfully renamed!') })\"",
     "copy:map": "cpy ../map/dist/** ../page/public && npm run rename",
     "copy": "cpy dist/index.html --rename=200.html .",
+
+    "dev": "rimraf public && npm run copy:map && vite",
     "build": "rimraf dist && vite build && npm run copy",
     "deploy": "rimraf public && npm run copy:map && npm run build",
+
     "preview": "vite preview"
   },
   "dependencies": {
