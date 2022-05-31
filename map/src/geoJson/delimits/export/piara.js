@@ -1,8 +1,14 @@
 import { useImage } from '@/util'
 
 const HTML = () => `
-  <div class="center content-popup-delimits">
+  <div class="content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
+
+    ${useImage(PIARA, 'piara-1.jpg')}
+
+    <p>El establo de porcinos es un lugar donde se cría al cerdo doméstico, el estudiante de la asignatura de MVZ en Porcinos recibe a lo largo de su formación áreas para desarrollar el sistema de producción como; aspectos generales de la porcicultura nacional y mundial, termorregulación, instalaciones y equipos, programación, genética, alimentación, sanidad, biotecnología reproductiva y las administrativas y económicas.</p>
+
+    <strong>Fuente: Instituto Universitario de la Paz.</strong>
 
     ${useImage(PIARA, 'piara.jpg')}
   </div>

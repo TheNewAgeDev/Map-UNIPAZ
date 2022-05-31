@@ -1,7 +1,7 @@
 import { useImage } from '@/util'
 
 const HTML = () => `
-  <div class="center content-popup-delimits">
+  <div class="content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
 
     ${useImage(EDIF_ADMIN, 'areaAdmin.jpg')}

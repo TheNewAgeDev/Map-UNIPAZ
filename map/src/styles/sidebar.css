@@ -17,6 +17,8 @@
   color:rgba(0, 0, 0, 0.689);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.129);
 
+  text-align: center;
+
   margin: 0;
   margin-top: 25px;
 }
@@ -25,13 +27,36 @@
   color: #fff;
 }
 
+.content-popup-delimits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .content-popup-delimits p {
+  display: block;
+  max-width: 75ch;
+
   margin: 0;
   padding: 0;
   margin-top: 5px;
 
+  font-size: 1rem;
+  text-align: justify;
+
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.content-popup-delimits strong {
+  display: block;
+
+  margin: 1rem 0;
+
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
