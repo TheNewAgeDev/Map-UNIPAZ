@@ -1,11 +1,14 @@
-import { getGeoJsonFromCircle } from '../../../util'
+import { getGeoJsonFromCircle, useImage } from '@/util'
 
-const HTML = `
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/rotonda.jpg" alt="Rotonda" />
+
+    ${useImage(ROTONDA, 'rotonda.jpg')}
+
     <p>También conocida como glorieta, se trata de un cruce de intersecciones compuesto por una estructura en la parte central, que comunica a la entrada-salida y parqueadero estudiantil de la institución, además es la parada oficial donde las busetas (Cotsem) dejan y recogen a la comunidad estudiantil.</p>
-    <img class="images-popup" src="/images/delimit/rotonda-1.jpg" alt="Rotonda" />
+
+    ${useImage(ROTONDA, 'rotonda-1.jpg')}
   </div>
 `
 

@@ -1,7 +1,11 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/laboratorioCiencias.jpg" alt="Laboratorio Ciencias Basicas" />
+
+    ${useImage(LABORATIO_CIENCIAS, 'laboratorioCiencias.jpg')}
+
     <p>El laboratorio de ciencias básicas cuenta con equipos para la aplicación de métodos espectro métricos que son utilizados para la implementación de prácticas académicas y tesis de grado.</p>
     <strong>Fuente: Instituto Universitario de la Paz.</strong>
   </div>

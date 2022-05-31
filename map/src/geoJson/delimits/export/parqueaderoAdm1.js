@@ -1,8 +1,12 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/parqAdmin1.jpg" alt="Parqueadero Administrativo 1" />
-    <p>Lugar destinado a estacionar vehículos (carros y motos) de la comunidad administrativa conformado por las plazas de estacionamiento, franja de circulación y franja de circulación peatonal, se encuentra ubicado al lado de la cafetería y al frente del laboratorio de anatomía.  </p>
+
+    ${useImage(PARQUEADERO_ADMIN_1, 'parqAdmin1.jpg')}
+
+    <p>Lugar destinado a estacionar vehículos (carros y motos) de la comunidad administrativa conformado por las plazas de estacionamiento, franja de circulación y franja de circulación peatonal, se encuentra ubicado al lado de la cafetería y al frente del laboratorio de anatomía.</p>
   </div>
 `
 

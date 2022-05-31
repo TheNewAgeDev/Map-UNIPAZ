@@ -1,9 +1,14 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/cafeteriaTia.jpg" alt="Cafeteria La Tia" />
+
+    ${useImage(CAFETERIA_LATIA, 'cafeteriaTia.jpg')}
+
     <p>Establecimiento ubicado cerca a la Plazoleta de la Paz dedicado a la venta de diversos alimentos (café, jugos de frutas, gaseosas, sándwiches, galletas, almuerzos, entre otros).</p>
-    <img class="images-popup" src="/images/delimit/cafeteriaTia-1.jpg" alt="Cafeteria La Tia" />
+
+    ${useImage(CAFETERIA_LATIA, 'cafeteriaTia-1.jpg')}
   </div>
 `
 

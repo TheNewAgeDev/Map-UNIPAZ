@@ -1,6 +1,8 @@
 import * as DELIMITS from './delimits'
 import { CATEGORIES } from '@/categories'
 
+import '@/styles/sidebar.css'
+
 export const DELIMITS_ARRAY = []
 
 for (const i of Object.entries(DELIMITS)) {

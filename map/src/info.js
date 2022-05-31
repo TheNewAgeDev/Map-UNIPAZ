@@ -39,7 +39,9 @@ function zoomToFeature (e) {
 }
 
 const getMessage = (properties) => {
-  const { name, category, html } = properties
+  const { name, category } = properties
+  let { html } = properties
+  if (typeof html === 'function') html = html()
 
   const mapObj = {
     '{{ title }}': name,

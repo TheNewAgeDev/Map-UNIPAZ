@@ -1,7 +1,10 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/8.jpg" alt="Aula 7 y 8" />
+
+    ${useImage(AULA7_8, '8.jpg')}
   </div>
 `
 

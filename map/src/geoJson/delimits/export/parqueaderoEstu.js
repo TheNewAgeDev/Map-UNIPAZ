@@ -1,7 +1,11 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/parqEstud.jpg" alt="Parqueadero Estudiantil" />
+
+    ${useImage(PARQUEADERO_ESTUDIANTIL, 'parqEstud.jpg')}
+
     <p>Lugar destinado a estacionar vehículos (carros y motos) de la comunidad estudiantil y algunos docentes, conformado por las plazas de estacionamiento, franja de circulación y franja de circulación peatonal, se encuentra ubicado en la entrada principal de la universidad.</p>
   </div>
 `

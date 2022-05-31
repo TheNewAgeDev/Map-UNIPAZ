@@ -1,7 +1,11 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/almacenElect.jpg" alt="Almacen de Componentes Electricos" />
+
+    ${useImage(ALM_ELECT, 'almacenElect.jpg')}
+
     <p>La función del almacén de componentes eléctricos es mantener la mercancía limpia y en orden en un lugar seguro, además de asegurar la facilidad y la seguridad de retiro y de inventario a quienes operan.</p>
   </div>
 `

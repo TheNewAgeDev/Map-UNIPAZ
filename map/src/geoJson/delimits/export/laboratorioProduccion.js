@@ -1,7 +1,11 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/laboratorioProdu.jpg" alt="Laboratorio De Producción" />
+
+    ${useImage(LABORATORIO_PRODUCCION, 'laboratorioProdu.jpg')}
+
     <p>En el laboratorio de producción se podrán desarrollar prácticas integrando diseño, operación y optimización de productos y procesos, que le permitirán al estudiante desarrollar nuevas competencias y adquirir experiencia en un ambiente industrial.</p>
   </div>
 `

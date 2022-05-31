@@ -1,7 +1,11 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/laboratorioAnatomia.jpg" alt="Laboratorio De Anatomía" />
+
+    ${useImage(LABORATORIO_ANATOMIA, 'laboratorioAnatomia.jpg')}
+
     <p>El Laboratorio de anatomía se encarga del trabajo con técnicas anatómicas, conservación y disección, con la finalidad de obtener un preparado con fines docentes (pregrado y posgrado) y entrenamiento quirúrgico.</p>
   </div>
 `

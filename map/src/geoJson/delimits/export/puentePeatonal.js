@@ -1,9 +1,14 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/puentePeatonal.jpg" alt="Puente Peatonal" />
+
+    ${useImage(PUENTE, 'puentePeatonal.jpg')}
+
     <p>El puente peatonal es una estructura que permite el paso de peatones sobre vías de tráfico altamente peligrosas, tristemente son pocos quienes lo utilizan adecuadamente, así que la invitación que extiende el instituto universitario de la paz es a usar el puente peatonal por el bien y la seguridad de toda la comunidad universitaria.</p>
-    <img class="images-popup" src="/images/delimit/puentePeatonal-1.jpg" alt="Puente Peatonal" />
+
+    ${useImage(PUENTE, 'puentePeatonal-1.jpg')}
   </div>
 `
 

@@ -1,7 +1,11 @@
-const HTML = `
+import { useImage } from '@/util'
+
+const HTML = () => `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/salaJuegos.jpg" alt="Salón de Juegos" />
+
+    ${useImage(JUEGOS, 'salaJuegos.jpg')}
+
     <p>El salón de juegos es un establecimiento que ofrece exclusivamente entretenimiento al público, es el espacio perfecto para la comunidad universitaria en donde pueden jugar y divertirse después de un gran día de estudio. (Contiene: Mesa de pin pon, entre otros).</p>
   </div>
 `

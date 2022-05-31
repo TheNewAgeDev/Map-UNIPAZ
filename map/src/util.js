@@ -22,3 +22,9 @@ export const waitFor = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 export const capitalizeString = (str) => {
   return str.toLowerCase().replace(/\b(\w)/g, s => s.toUpperCase())
 }
+
+export const useImage = (delimit, image) => {
+  const alt = delimit.properties.name
+
+  return `<img class="images-popup" src="/images/delimit/${image}" alt="${alt}" />`
+}
