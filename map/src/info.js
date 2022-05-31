@@ -3,7 +3,6 @@ import { map, L } from '@/leaflet'
 import { resetStyleHover, styleHover } from '@/categories'
 
 import { getConfigStorage } from '@/storage'
-
 import { isMobileNow } from '@/util'
 
 /* Muestra la Información como Hover */

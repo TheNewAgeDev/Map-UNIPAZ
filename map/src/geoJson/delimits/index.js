@@ -22,6 +22,8 @@ export * from './export/laboratorioAnatomia'
 export * from './export/laboratorioCiencias'
 
 export * from './export/vivero'
+export * from './export/galpon'
+export * from './export/piara'
 
 export * from './export/puentePeatonal'
 export * from './export/rotonda'

@@ -49,7 +49,7 @@ export const BIBLIOTECA = {
   id: 'f4df7b39-2337-427b-b7bd-b0135985d433',
   properties: {
     name: 'Biblioteca, Auditorio, Salas de Informatica',
-    category: 'default',
+    category: 'Aula',
     html: HTML
   }
 }

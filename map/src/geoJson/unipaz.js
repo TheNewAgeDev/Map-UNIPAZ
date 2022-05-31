@@ -12,7 +12,7 @@ for (const i of Object.entries(DELIMITS)) {
 export const UNIPAZ_CATEGORIES = {}
 
 DELIMITS_ARRAY.forEach(delimit => {
-  let category = delimit.properties.category.toUpperCase()
+  let category = delimit.properties.category?.toUpperCase()
   if (!CATEGORIES[category]) category = 'DEFAULT'
 
   UNIPAZ_CATEGORIES[category]

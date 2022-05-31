@@ -44,8 +44,8 @@ export const CATEGORIES = {
 
     color: '#17202A',
     hoverColor: '#17202A',
-    fillColor: '#87DF6A',
-    hoverFillColor: '#87D05A',
+    fillColor: '#F2806C',
+    hoverFillColor: '#E75238',
     opacity: 0.5,
     hoverOpacity: 0.7
   },
@@ -64,15 +64,35 @@ export const CATEGORIES = {
 
     color: '#17202A',
     hoverColor: '#17202A',
-    fillColor: '#8c5e6f',
+    fillColor: '#CF63E8',
     hoverFillColor: '#8c5e99',
+    opacity: 0.5,
+    hoverOpacity: 0.7
+  },
+  MVZ: {
+    name: 'MVZ',
+
+    color: '#17202A',
+    hoverColor: '#17202A',
+    fillColor: '#87DF6A',
+    hoverFillColor: '#87D05A',
+    opacity: 0.5,
+    hoverOpacity: 0.7
+  },
+  ADMIN: {
+    name: 'Administrativos',
+
+    color: '#17202A',
+    hoverColor: '#17202A',
+    fillColor: '#63B9E8',
+    hoverFillColor: '#42A4D9',
     opacity: 0.5,
     hoverOpacity: 0.7
   }
 }
 
 function getCategory (props) {
-  return CATEGORIES[props.category.toUpperCase()] || CATEGORIES.DEFAULT
+  return CATEGORIES[props.category?.toUpperCase()] || CATEGORIES.DEFAULT
 }
 
 function addStyleDefault (props) {
