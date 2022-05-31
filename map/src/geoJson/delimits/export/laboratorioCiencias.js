@@ -2,7 +2,8 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/laboratorioCiencias.jpg" alt="Laboratorio Ciencias Basicas" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>El laboratorio de ciencias básicas cuenta con equipos para la aplicación de métodos espectro métricos que son utilizados para la implementación de prácticas académicas y tesis de grado.</p>
+    <strong>Fuente: Instituto Universitario de la Paz.</strong>
   </div>
 `
 

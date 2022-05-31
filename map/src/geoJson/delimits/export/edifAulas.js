@@ -2,7 +2,13 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/edifAulas.jpg" alt="Edificio de Aulas" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>La inversión en la construcción del edificio fue del orden de los 14 mil millones de pesos y eso permitió una estructura de 4 pisos con 51 aulas con capacidad para 2500 personas, 2 baterías de baños para hombres y 2 para mujeres por piso para un total de 16 baños, 1 cafetería, 2 laboratorios, área cultural, 2 auditorios tipo audiovisual, 2 salas sistematizadas, un aula múltiple, la planta de tratamiento de aguas residuales, el subterráneo de agua potable y la subestación eléctrica.</p>
+
+    <strong>Fuente: Instituto Universitario de la Paz.</strong>
+
+    <img class="images-popup" src="/images/delimit/edifAulas-1.jpg" alt="Edificio de Aulas" />
+    <img class="images-popup" src="/images/delimit/edifAulas-2.jpg" alt="Edificio de Aulas" />
+    <img class="images-popup" src="/images/delimit/edifAulas-3.jpg" alt="Edificio de Aulas" />
   </div>
 `
 

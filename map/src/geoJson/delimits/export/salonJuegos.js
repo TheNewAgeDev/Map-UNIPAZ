@@ -2,7 +2,7 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/salaJuegos.jpg" alt="Salón de Juegos" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>El salón de juegos es un establecimiento que ofrece exclusivamente entretenimiento al público, es el espacio perfecto para la comunidad universitaria en donde pueden jugar y divertirse después de un gran día de estudio. (Contiene: Mesa de pin pon, entre otros).</p>
   </div>
 `
 

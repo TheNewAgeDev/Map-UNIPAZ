@@ -1,8 +1,9 @@
 const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/puentePeatonal.jpg" alt="Gimnasio" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <img class="images-popup" src="/images/delimit/puentePeatonal.jpg" alt="Puente Peatonal" />
+    <p>El puente peatonal es una estructura que permite el paso de peatones sobre vías de tráfico altamente peligrosas, tristemente son pocos quienes lo utilizan adecuadamente, así que la invitación que extiende el instituto universitario de la paz es a usar el puente peatonal por el bien y la seguridad de toda la comunidad universitaria.</p>
+    <img class="images-popup" src="/images/delimit/puentePeatonal-1.jpg" alt="Puente Peatonal" />
   </div>
 `
 

@@ -2,7 +2,6 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/10.jpg" alt="Aula 10" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
   </div>
 `
 

@@ -2,7 +2,7 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/plazoleta.jpg" alt="Plazoleta de la Paz" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>La plazoleta de la paz es un espacio público, amplio descubierto, en el que se suelen realizar gran variedad de actividades sociales, comerciales y culturales, cuenta con un gran y visible logo de nuestra institución, mesas y sillas las cuales tienen un techo agradable con paneles solares para pasar el tiempo con amigos, además queda cerca al punto de encuentro de la institución universitaria de la paz.</p>
   </div>
 `
 

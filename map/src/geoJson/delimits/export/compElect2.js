@@ -1,8 +1,7 @@
 const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
-    <img class="images-popup" src="/images/delimit/compElect2.jpg" alt="Cancha Voleibol 1" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <img class="images-popup" src="/images/delimit/compElect2.jpg" alt="Componentes Electricos" />
   </div>
 `
 

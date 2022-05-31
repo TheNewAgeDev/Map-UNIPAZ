@@ -2,7 +2,7 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/cafeteria.jpg" alt="Cafeteria" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>Establecimiento ubicado al lado del parqueadero administrativo 2, dedicado a la venta de diversos alimentos (café, jugos de frutas, gaseosas, sándwiches, galletas, almuerzos, entre otros). ACTUALMENTE SE ENCUENTRA CERRADO</p>
   </div>
 `
 

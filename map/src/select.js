@@ -4,6 +4,7 @@ import { DELIMITS_ARRAY } from '@/geoJson/unipaz'
 import { selectStyle } from '@/categories'
 
 const LOCATIONS_NAMES = []
+const VISIBLE_SECONDS = 10
 
 DELIMITS_ARRAY.forEach(function (item) {
   const nameInclude = LOCATIONS_NAMES.find(item2 => item2[0] === item.id)
@@ -81,5 +82,5 @@ selectLocation.addEventListener('change', async function (e) {
     if (marker) marker.remove()
 
     selectLocation.value = 'default'
-  }, 5000)
+  }, VISIBLE_SECONDS * 1000)
 })

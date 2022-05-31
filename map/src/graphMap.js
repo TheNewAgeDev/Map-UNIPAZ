@@ -14,7 +14,12 @@ import '#/customPlugins/legend'
 const configStorage = getConfigStorage()
 
 const RETORNO = L.marker([7.071283672458979, -73.73667776584625])
-  .bindPopup('Retorno a la Universidad')
+  .bindPopup(`
+    <div>
+      <h2>Retorno a la Universidad</h2>
+      <img class="images-popup" src="/images/delimit/retorno.jpg" alt="Retorno" />
+    </div>
+  `)
 
 let isFirtsTime = true
 RETORNO.on('add', () => {

@@ -2,7 +2,8 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/canchaVoley1.jpg" alt="Cancha Voleibol 1" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>El instituto universitario de la paz cuenta con dos (2) canchas de voleibol compuestas de arena fina, las cuales están muy bien niveladas y uniformes, abiertas siempre al público, en donde los estudiantes podrán sacar sus habilidades para jugar entre amigos y lo mejor de todo, enfrentarse a campeonatos que realiza la universidad con estudiantes y docentes ¡Que divertido!</p>
+    <img class="images-popup" src="/images/delimit/canchaVoley1-1.jpg" alt="Cancha Voleibol 1" />
   </div>
 `
 

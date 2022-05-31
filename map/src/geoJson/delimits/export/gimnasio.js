@@ -2,7 +2,7 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/gimnasio.jpg" alt="Gimnasio" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>El gimnasio es un lugar que permite practicar deportes o hacer ejercicio en un recinto cerrado con varias máquinas y artículos deportivos para el uso de toda la comunidad del instituto universitario de la paz en general, con un ambiente ameno, música al gusto y un entrenador que estará a disposición de todos y todas.</p>
   </div>
 `
 

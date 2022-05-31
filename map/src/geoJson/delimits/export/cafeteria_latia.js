@@ -2,7 +2,8 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/cafeteriaTia.jpg" alt="Cafeteria La Tia" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>Establecimiento ubicado cerca a la Plazoleta de la Paz dedicado a la venta de diversos alimentos (café, jugos de frutas, gaseosas, sándwiches, galletas, almuerzos, entre otros).</p>
+    <img class="images-popup" src="/images/delimit/cafeteriaTia-1.jpg" alt="Cafeteria La Tia" />
   </div>
 `
 

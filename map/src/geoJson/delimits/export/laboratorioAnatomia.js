@@ -2,7 +2,7 @@ const HTML = `
   <div class="center content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
     <img class="images-popup" src="/images/delimit/laboratorioAnatomia.jpg" alt="Laboratorio De Anatomía" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ea.</p>
+    <p>El Laboratorio de anatomía se encarga del trabajo con técnicas anatómicas, conservación y disección, con la finalidad de obtener un preparado con fines docentes (pregrado y posgrado) y entrenamiento quirúrgico.</p>
   </div>
 `
 
