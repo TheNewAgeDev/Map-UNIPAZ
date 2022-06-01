@@ -1,7 +1,8 @@
 .images-popup {
   width: 100%;
-  min-height: 100px;
   height: auto;
+
+  border-radius: 5px;
 
   margin: 0;
   padding: 0;
@@ -10,8 +11,10 @@
 .title-popup {
   width: 100%;
   padding: 5px;
+
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 
   background: rgba(162, 160, 160, 0.108);
   color:rgba(0, 0, 0, 0.689);
@@ -38,9 +41,8 @@
   display: block;
   max-width: 75ch;
 
-  margin: 0;
+  margin: 5px 0;
   padding: 0;
-  margin-top: 5px;
 
   font-size: 1rem;
   text-align: justify;

@@ -78,6 +78,11 @@
 
 /* Leaflets Control */
 
+.dark .leaflet-popup-content-wrapper, .dark .leaflet-popup-tip {
+  background: rgba(0, 0, 0, 0.271);
+  color: #fff;
+}
+
 .leaflet-control-layers-expanded {
   background: white;
   background: rgba(255,255,255,0.8);
@@ -101,6 +106,27 @@
   border: 0.5px solid #ccc;
   border-radius: 5px;
 }
+
+.leaflet-sidebar > .leaflet-control::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: #ccc;
+}
+
+.leaflet-sidebar > .leaflet-control::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: black;
+}
+
+.dark .leaflet-control::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: black;
+}
+
+.dark .leaflet-control::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
 
 .dark .leaflet-sidebar > .leaflet-control {
   background: rgba(0, 0, 0, 0.368);

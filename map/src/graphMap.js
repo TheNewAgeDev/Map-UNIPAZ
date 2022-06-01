@@ -7,19 +7,23 @@ import '@/select'
 import { info, onEachFeature } from '@/info'
 import { styleDefault, CATEGORIES } from '@/categories'
 import { UNIPAZ_CATEGORIES } from '@/geoJson/unipaz'
-import { isMobileNow } from '@/util'
+import { isMobileNow, useImage } from '@/util'
 
 import '#/customPlugins/legend'
 
 const configStorage = getConfigStorage()
 
-const RETORNO = L.marker([7.071283672458979, -73.73667776584625])
-  .bindPopup(`
-    <div>
-      <h2>Retorno a la Universidad</h2>
-      <img class="images-popup" src="/images/delimit/retorno.jpg" alt="Retorno" />
-    </div>
-  `)
+/* CONFIGURACIÓN a tipica del Retorno */
+
+const HTML_RETORNO = `
+  <div class="content-popup-delimits">
+    <h3 class="title-popup" style="margin:0;">Retorno a la Universidad</h3>
+    ${useImage('Retorno', 'retorno.jpg')}
+    <p>El retorno es la vía que deben tomar todas las personas que quieran ingresar a la universidad si vienen desde Barrancabermeja, la invitación que hace el instituto universitario de la paz, es ir hasta el retorno para poder ingresar correctamente a la institución, y no poner en riesgo la vida de nadie.</p>
+  </div>
+`
+
+const RETORNO = L.marker([7.071283672458979, -73.73667776584625]).bindPopup(HTML_RETORNO)
 
 let isFirtsTime = true
 RETORNO.on('add', () => {
@@ -38,6 +42,8 @@ RETORNO.on('remove', () => {
 })
 
 configStorage?.retorno && RETORNO.addTo(map)
+
+/* Configuracíón y Creación de las delimitaciónes */
 
 const CATEGORY_LEGEND = []
 const DEFAULT_LEGENDS = [{

@@ -7,10 +7,11 @@ const HTML = () => `
     ${useImage(VIVERO, 'vivero.jpg')}
 
     <p>Centro de producción de material vegetal también constituye un espacio de investigación formativa y especializada. Se ha utilizado para el desarrollo de procesos de investigación de estudiantes y docentes adscritos a semilleros y grupos de investigación y tesistas de la institución. Entre sus objetivos están el recuperar especies vegetales propias del bosque húmedo tropical y establecer espacios de aprendizaje académico y científico del programa y la institución. </p>
-    <strong>Fuente: Instituto Universitario de la Paz.</strong>
 
     ${useImage(VIVERO, 'vivero-1.jpg')}
     ${useImage(VIVERO, 'vivero-2.jpg')}
+
+    <strong>Fuente: Instituto Universitario de la Paz.</strong>
   </div>
 `
 

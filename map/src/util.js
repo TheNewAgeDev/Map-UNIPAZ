@@ -24,7 +24,13 @@ export const capitalizeString = (str) => {
 }
 
 export const useImage = (delimit, image) => {
-  const alt = delimit.properties.name
+  const alt = delimit?.properties?.name || delimit || 'Delimitación'
+  const DEFAULT_IMG = 'https://i.imgur.com/vDNCHXg.jpg'
 
-  return `<img class="images-popup" src="/images/delimit/${image}" alt="${alt}" />`
+  return `<img
+    class="images-popup"
+    src="/images/delimit/${image}"
+    onerror="this.onerror=null;this.src='${DEFAULT_IMG}';"
+    alt="${alt}"
+  />`
 }

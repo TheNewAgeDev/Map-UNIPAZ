@@ -8,11 +8,11 @@ const HTML = () => `
 
     <p>La inversión en la construcción del edificio fue del orden de los 14 mil millones de pesos y eso permitió una estructura de 4 pisos con 51 aulas con capacidad para 2500 personas, 2 baterías de baños para hombres y 2 para mujeres por piso para un total de 16 baños, 1 cafetería, 2 laboratorios, área cultural, 2 auditorios tipo audiovisual, 2 salas sistematizadas, un aula múltiple, la planta de tratamiento de aguas residuales, el subterráneo de agua potable y la subestación eléctrica.</p>
 
-    <strong>Fuente: Instituto Universitario de la Paz.</strong>
-
     ${useImage(EDIF_AULAS, 'edifAulas-1.jpg')}
     ${useImage(EDIF_AULAS, 'edifAulas-2.jpg')}
     ${useImage(EDIF_AULAS, 'edifAulas-3.jpg')}
+
+    <strong>Fuente: Instituto Universitario de la Paz.</strong>
   </div>
 `
 
