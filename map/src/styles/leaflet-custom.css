@@ -127,6 +127,15 @@
   background-color: #ccc;
 }
 
+.leaflet-sidebar > .leaflet-control::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.498);
+}
+
+.dark .leaflet-control::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  background-color: rgba(204, 204, 204, 0.45);
+}
 
 .dark .leaflet-sidebar > .leaflet-control {
   background: rgba(0, 0, 0, 0.368);
