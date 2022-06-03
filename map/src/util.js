@@ -1,5 +1,7 @@
 import circleToGeoJson from 'circle-to-polygon'
 
+const getRandomId = () => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+
 function isMobile () {
   return (
     (navigator.userAgent.match(/Android/i)) ||
@@ -35,6 +37,41 @@ export const useImage = (delimit, image) => {
   />`
 }
 
+/* use Accordeon Functions */
+
+export const useAccordeon = (sliders) => {
+  const name = getRandomId()
+  const idButtonClose = getRandomId()
+
+  return `
+    <div class="accordion">
+      <div class="col">
+        <div class="tabs">
+
+          ${sliders.map(slider => {
+            const id = getRandomId()
+
+            return `
+              <div class="tab">
+                <input type="radio" id="${id}" name="${name}">
+                <label class="tab-label" for="${id}">${slider.title}</label>
+                <div class="tab-content">
+                  ${slider.content}
+                </div>
+              </div>
+            `
+          }).join('')}
+
+          <div class="tab">
+            <input type="radio" id="${idButtonClose}" name="${name}">
+            <label for="${idButtonClose}" class="tab-close">Cerrar &times;</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+}
+
 /* use Slider Functions */
 
 const TIME_SLIDER = 3000
@@ -59,8 +96,6 @@ export const interval = {
     }
   }
 }
-
-const getRandomId = () => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 
 const setStyleSlider = (sliders) => {
   let styles = '<style>'

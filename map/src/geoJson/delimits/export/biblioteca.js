@@ -1,4 +1,18 @@
-import { useImage, useSlider } from '@/util'
+import { useImage, useSlider, useAccordeon } from '@/util'
+
+const SLIDERS = [
+  {
+    title: 'Delimitación',
+    content: `
+     lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+    `
+  }, {
+    title: 'Delimitación 2',
+    content: `
+      lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+    `
+  }
+]
 
 const HTML = () => `
   <div class="content-popup-delimits">
@@ -11,6 +25,12 @@ const HTML = () => `
         useImage(BIBLIOTECA, 'biblioteca-2.jpg')
       ])
     }
+
+    <h2>Piso 1:</h2>
+    ${useAccordeon(SLIDERS)}
+
+    <h2>Piso 2:</h2>
+    ${useAccordeon(SLIDERS)}
   </div>
 `
 
