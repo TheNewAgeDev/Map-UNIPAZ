@@ -105,6 +105,8 @@
 
   border: 0.5px solid #ccc;
   border-radius: 5px;
+
+  overflow-x: hidden;
 }
 
 .leaflet-sidebar > .leaflet-control::-webkit-scrollbar {

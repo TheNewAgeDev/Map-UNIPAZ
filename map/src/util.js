@@ -34,3 +34,63 @@ export const useImage = (delimit, image) => {
     alt="${alt}"
   />`
 }
+
+const getRandomId = () => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+
+const setStyleSlider = (sliders) => {
+  let styles = '<style>'
+  let radio = 0
+  let i = 1
+
+  sliders.forEach(slider => {
+    styles += `
+      .${slider[0]}:nth-of-type(${i}):checked ~ label {
+        transform: translate3d(${radio === 0 ? radio : `-${radio}%`}, 0, 0);
+      }
+    `
+    radio += 100
+    i++
+  })
+  styles += '</style>'
+
+  return styles
+}
+
+export const useSlider = (images) => {
+  const sliders = images.map(image => {
+    const id = getRandomId()
+    const inputSlide = `<input class="${id}" type="radio" name="slide" id="${id}" />`
+    const label = `<label for="${id}">${image}</label>`
+
+    return [
+      id,
+      inputSlide,
+      label
+    ]
+  })
+
+  let check = 0
+  setInterval(() => {
+    const input = document.getElementById(sliders[check][0])
+    if (input) input.checked = true
+
+    check++
+    if (check > sliders.length - 1) check = 0
+  }, 5000)
+
+  const styles = setStyleSlider(sliders)
+
+  return `
+  <div class="slider">
+
+    <form class="content-slider">
+
+      ${sliders.map(inputs => inputs[1]).join('')}
+
+      ${sliders.map(labels => labels[2]).join('')}
+    </form>
+
+    ${styles}
+  </div>
+  `
+}

@@ -1,12 +1,16 @@
-import { useImage } from '@/util'
+import { useImage, useSlider } from '@/util'
 
 const HTML = () => `
   <div class="content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
 
-    ${useImage(BIBLIOTECA, 'biblioteca.jpg')}
-    ${useImage(BIBLIOTECA, 'biblioteca-1.jpg')}
-    ${useImage(BIBLIOTECA, 'biblioteca-2.jpg')}
+    ${
+      useSlider([
+        useImage(BIBLIOTECA, 'biblioteca.jpg'),
+        useImage(BIBLIOTECA, 'biblioteca-1.jpg'),
+        useImage(BIBLIOTECA, 'biblioteca-2.jpg')
+      ])
+    }
   </div>
 `
 
