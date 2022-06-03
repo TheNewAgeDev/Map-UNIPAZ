@@ -3,13 +3,13 @@ import { map, L } from '@/leaflet'
 import { resetStyleHover, styleHover } from '@/categories'
 
 import { getConfigStorage } from '@/storage'
-import { isMobileNow } from '@/util'
+import { isMobileNow, interval } from '@/util'
 
 /* Muestra la Información como Hover */
 
 export const info = L.control()
 
-info.onAdd = function (map) {
+info.onAdd = function () {
   this._div = L.DomUtil.create('div', 'info')
   this.update()
   return this._div
@@ -63,12 +63,13 @@ export const onEachFeature = async (feature, layer) => {
     click: zoomToFeature
   })
 
-  const message = feature.properties.html
-    ? getMessage(feature.properties)
-    : `<strong>Edificio</strong>: ${feature.properties.name}`
-
   layer.on('click', async ({ isSelect }) => {
     const { waitFor } = await import('./util')
+    interval.clearAll()
+
+    const message = feature.properties.html
+      ? getMessage(feature.properties)
+      : `<strong>Edificio</strong>: ${feature.properties.name}`
 
     sidebar.setContent(message)
 

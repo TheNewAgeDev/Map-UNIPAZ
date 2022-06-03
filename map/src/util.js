@@ -35,6 +35,31 @@ export const useImage = (delimit, image) => {
   />`
 }
 
+/* use Slider Functions */
+
+const TIME_SLIDER = 3000
+
+export const interval = {
+  intervals: new Set(),
+
+  add (func, ms) {
+    const newInterval = setInterval(func, ms)
+    this.intervals.add(newInterval)
+    return newInterval
+  },
+
+  clear (id) {
+    this.intervals.delete(id)
+    return clearInterval(id)
+  },
+
+  clearAll () {
+    for (const id of this.intervals) {
+      this.clear(id)
+    }
+  }
+}
+
 const getRandomId = () => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 
 const setStyleSlider = (sliders) => {
@@ -57,6 +82,8 @@ const setStyleSlider = (sliders) => {
 }
 
 export const useSlider = (images) => {
+  if (!images || typeof images !== 'object') return ''
+
   const sliders = images.map(image => {
     const id = getRandomId()
     const inputSlide = `<input class="${id}" type="radio" name="slide" id="${id}" />`
@@ -69,14 +96,14 @@ export const useSlider = (images) => {
     ]
   })
 
-  let check = 0
-  setInterval(() => {
+  let check = sliders.length > 1 ? 1 : 0
+  interval.add(() => {
     const input = document.getElementById(sliders[check][0])
     if (input) input.checked = true
 
     check++
     if (check > sliders.length - 1) check = 0
-  }, 5000)
+  }, TIME_SLIDER)
 
   const styles = setStyleSlider(sliders)
 
