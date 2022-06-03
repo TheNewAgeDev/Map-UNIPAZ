@@ -5,6 +5,32 @@ const HTML = () => `
     <h3 class="title-popup">{{ title }}</h3>
 
     ${useImage(EDIF_ADMIN, 'areaAdmin.jpg')}
+
+    <div class="accordion">
+      <div class="col">
+        <div class="tabs">
+          <div class="tab">
+            <input type="radio" id="rd1" name="rd">
+            <label class="tab-label" for="rd1">Item 1</label>
+            <div class="tab-content">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" id="rd2" name="rd">
+            <label class="tab-label" for="rd2">Item 2</label>
+            <div class="tab-content">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" id="rd3" name="rd">
+            <label for="rd3" class="tab-close">Cerrar &times;</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
     ${useImage(EDIF_ADMIN, 'areaAdmin-1.jpg')}
   </div>
 `
