@@ -31,11 +31,11 @@ const HTML = () => `
       ])
     }
 
-    <h4 style="margin-top:15px;">Piso 1:</h4>
+    <h4 style="margin-top:15px;">Piso 1</h4>
     <p style="margin-bottom: 0;">Sitio donde se puede recurrir para leer, buscar información y estudiar. Cuenta con papelería, fotocopiadora, sala de fotointerpretación, sala de lectura y música.</p>
     ${useAccordeon(SLIDERS_1)}
 
-    <h4 style="margin-bottom:15px;">Piso 2:</h4>
+    <h4 style="margin-bottom:15px;">Piso 2</h4>
     <ul class="info-ul">
       <li>Auditorios principales, 1 y 2 </li>
       <li>Salas de informática</li>
