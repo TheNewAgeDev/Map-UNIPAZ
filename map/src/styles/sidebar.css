@@ -48,7 +48,18 @@
   text-align: justify;
 }
 
-.content-popup-delimits strong {
+.content-popup-delimits h4 {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  font-size: 1.4rem;
+  text-decoration:underline;
+  text-decoration-color: #2472b783;
+  border-bottom: 1px solid rgba(18, 126, 152, 0.415);
+}
+
+.content-popup-delimits .copyright {
   display: block;
 
   margin: 1rem 0;
@@ -56,6 +67,12 @@
   font-size: 0.9rem;
   font-weight: bold;
   font-style: italic;
+}
+
+.content-popup-delimits .info-ul li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  margin-bottom: 15px;
 }
 
 /* Acordeon */
@@ -114,11 +131,13 @@
   text-align: center;
   transition: all 0.35s;
 }
+
 .accordion .tab-content {
   max-height: 0;
   padding: 0 1em;
   color: #000;
   background: white;
+  text-align: center;
   transition: all 0.35s;
 }
 

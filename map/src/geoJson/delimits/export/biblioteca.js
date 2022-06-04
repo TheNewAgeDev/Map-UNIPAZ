@@ -1,15 +1,20 @@
 import { useImage, useSlider, useAccordeon } from '@/util'
 
-const SLIDERS = [
+const SLIDERS_1 = [
   {
-    title: 'Delimitación',
+    title: 'Horario de atención',
     content: `
-     lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+    <strong>Lunes a jueves:</strong> 7:00 am - 4:30 pm <br>
+    <strong>Viernes a sábado:</strong> 7:00 am - 3:30 pm
     `
   }, {
-    title: 'Delimitación 2',
+    title: 'Contacto',
     content: `
-      lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+    <strong>Johnny Javier Meza Jaraba</strong> <br>
+    Director Centro de Información (e) <br>
+    dir.centrodeinformación@unipaz.edu.co <br>
+    biblioteca@unipaz.edu.co <br>
+    Teléfono: 6 11 82 10 Ext. 226
     `
   }
 ]
@@ -26,11 +31,16 @@ const HTML = () => `
       ])
     }
 
-    <h2>Piso 1:</h2>
-    ${useAccordeon(SLIDERS)}
+    <h4 style="margin-top:15px;">Piso 1:</h4>
+    <p style="margin-bottom: 0;">Sitio donde se puede recurrir para leer, buscar información y estudiar. Cuenta con papelería, fotocopiadora, sala de fotointerpretación, sala de lectura y música.</p>
+    ${useAccordeon(SLIDERS_1)}
 
-    <h2>Piso 2:</h2>
-    ${useAccordeon(SLIDERS)}
+    <h4 style="margin-bottom:15px;">Piso 2:</h4>
+    <ul class="info-ul">
+      <li>Auditorios principales, 1 y 2 </li>
+      <li>Salas de informática</li>
+      <li>Coordinación salas TIC</li>
+    </ul>
   </div>
 `
 

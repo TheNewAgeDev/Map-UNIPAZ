@@ -7,7 +7,8 @@ const HTML = () => `
     ${useImage(LABORATIO_CIENCIAS, 'laboratorioCiencias.jpg')}
 
     <p>El laboratorio de ciencias básicas cuenta con equipos para la aplicación de métodos espectro métricos que son utilizados para la implementación de prácticas académicas y tesis de grado.</p>
-    <strong>Fuente: Instituto Universitario de la Paz.</strong>
+
+    <strong class="copyright">Fuente: Instituto Universitario de la Paz.</strong>
   </div>
 `
 

@@ -16,7 +16,7 @@ const HTML = () => `
       ])
     }
 
-    <strong>Fuente: Instituto Universitario de la Paz.</strong>
+    <strong class="copyright">Fuente: Instituto Universitario de la Paz.</strong>
   </div>
 `
 

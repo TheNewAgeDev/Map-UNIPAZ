@@ -20,10 +20,10 @@ const HTML = () => `
 
     ${useImage(EDIF_ADMIN, 'areaAdmin.jpg')}
 
-    <h2>Piso 1:</h2>
+    <h4 style="margin-top:15px;">Piso 1:</h4>
     ${useAccordeon(SLIDERS)}
 
-    <h2>Piso 2:</h2>
+    <h4>Piso 2:</h4>
     ${useAccordeon(SLIDERS)}
 
     ${useImage(EDIF_ADMIN, 'areaAdmin-1.jpg')}

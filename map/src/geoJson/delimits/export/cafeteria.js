@@ -8,7 +8,7 @@ const HTML = () => `
 
     <p>Establecimiento ubicado al lado del parqueadero administrativo 2, dedicado a la venta de diversos alimentos (café, jugos de frutas, gaseosas, sándwiches, galletas, almuerzos, entre otros).</p>
 
-    <strong>ACTUALMENTE SE ENCUENTRA CERRADO</strong>
+    <strong class="copyright">ACTUALMENTE SE ENCUENTRA CERRADO</strong>
   </div>
 `
 

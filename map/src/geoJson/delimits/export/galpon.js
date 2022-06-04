@@ -10,7 +10,7 @@ const HTML = () => `
 
     ${useImage(GALPON, 'galpon.jpg')}
 
-    <strong>Fuente: Instituto Universitario de la Paz.</strong>
+    <strong class="copyright">Fuente: Instituto Universitario de la Paz.</strong>
   </div>
 `
 
@@ -30,7 +30,7 @@ export const GALPON = {
   },
   id: '78191213-62ab-480a-901b-705ed1bfa954',
   properties: {
-    name: 'Galpon',
+    name: 'Galpón',
     category: 'MVZ',
     html: HTML
   }
