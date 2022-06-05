@@ -1,0 +1,19 @@
+.download {
+  display: block;
+  height: 2rem;
+  margin-top: 10px;
+
+  background-color: rgb(129, 169, 205);
+  color: white;
+
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download:hover {
+  background-color: rgb(71, 130, 181);
+  color: white;
+}

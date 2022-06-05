@@ -10,4 +10,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 1.2rem;
+}
+
+.row {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col {
+  width: 100%;
+  height: auto;
+  min-height: 5rem;
+
+  font-size: 1.1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(2, 21, 38);
+}
+
+.img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.2rem;
+}
+
+.a {
+  color: rgb(2, 21, 38);
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a:hover {
+  color: rgba(0, 0, 0, 0.626);
+  text-decoration: none;
 }
