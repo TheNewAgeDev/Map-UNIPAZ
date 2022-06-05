@@ -195,12 +195,11 @@ const HTML = () => `
     ${useImage(EDIF_ADMIN, 'areaAdmin.jpg')}
 
     <h4 style="margin-top:15px;">Piso 1</h4>
+    ${useImage(EDIF_ADMIN, 'areaAdmin-1.jpg')}
     ${useAccordeon(SLIDERS_FLOOR1)}
 
     <h4>Piso 2</h4>
     ${useAccordeon(SLIDERS_FLOOR2)}
-
-    ${useImage(EDIF_ADMIN, 'areaAdmin-1.jpg')}
   </div>
 `
 

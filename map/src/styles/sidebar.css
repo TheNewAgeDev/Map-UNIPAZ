@@ -69,10 +69,14 @@
   font-style: italic;
 }
 
+.content-popup-delimits .info-ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .content-popup-delimits .info-ul li {
   font-size: 1rem;
   margin: 0.5rem 0;
-  margin-bottom: 15px;
 }
 
 /* Acordeon */

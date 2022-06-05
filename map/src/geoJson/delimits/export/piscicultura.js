@@ -1,8 +1,24 @@
-const HTML = () => {
-  return `
-    a
-  `
-}
+import { useImage, useSlider } from '@/util'
+
+const HTML = () => `
+  <div class="content-popup-delimits">
+    <h3 class="title-popup">{{ title }}</h3>
+
+    ${
+      useSlider([
+        useImage(PISCICULTURA, 'piscicultura.jpg'), useImage(PISCICULTURA, 'piscicultura-1.jpg')
+      ])
+    }
+
+    <p>Al finalizar el desarrollo del módulo Medicina Veterinaria y Zootecnia en Peces se espera que los estudiantes estén capacitados para:
+    “Desarrollar un sistema sostenible de explotación piscícola a partir de elementos que le permitan ser gestor de alternativas de solución a las problemáticas que generalmente se presentan en las áreas de sanidad, producción y administración, cimentado en valores éticos hacia su profesión y su entorno”.
+    </p>
+
+    ${useImage(PISCICULTURA, 'piscicultura-2.jpg')}
+
+    <strong class="copyright">Fuente: Instituto Universitario de la Paz.</strong>
+  </div>
+`
 
 export const PISCICULTURA = {
   type: 'Feature',

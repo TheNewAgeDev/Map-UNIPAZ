@@ -1,4 +1,4 @@
-import { useImage, useSlider, useAccordeon } from '@/util'
+import { useImage, useAccordeon } from '@/util'
 
 const SLIDERS_1 = [
   {
@@ -23,19 +23,15 @@ const HTML = () => `
   <div class="content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
 
-    ${
-      useSlider([
-        useImage(BIBLIOTECA, 'biblioteca.jpg'),
-        useImage(BIBLIOTECA, 'biblioteca-1.jpg'),
-        useImage(BIBLIOTECA, 'biblioteca-2.jpg')
-      ])
-    }
+    ${useImage(BIBLIOTECA, 'biblioteca.jpg')}
 
     <h4 style="margin-top:15px;">Piso 1</h4>
+    ${useImage(BIBLIOTECA, 'biblioteca-1.jpg')}
     <p style="margin-bottom: 0;">Sitio donde se puede recurrir para leer, buscar información y estudiar. Cuenta con papelería, fotocopiadora, sala de fotointerpretación, sala de lectura y música.</p>
     ${useAccordeon(SLIDERS_1)}
 
     <h4 style="margin-bottom:15px;">Piso 2</h4>
+    ${useImage(BIBLIOTECA, 'biblioteca-2.jpg')}
     <ul class="info-ul">
       <li>Auditorios principales, 1 y 2 </li>
       <li>Salas de informática</li>
