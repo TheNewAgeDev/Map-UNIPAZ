@@ -9,7 +9,7 @@ const LOCATIONS_NAMES = []
 DELIMITS_ARRAY.forEach(function (item) {
   const nameInclude = LOCATIONS_NAMES.find(item2 => item2[0] === item.id)
 
-  if (item.properties.name && !nameInclude) {
+  if (item.properties?.name && !nameInclude) {
     LOCATIONS_NAMES.push([item.id, item.properties.name])
   }
 })

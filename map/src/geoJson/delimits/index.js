@@ -7,7 +7,8 @@ export * from './export/plazoleta'
 
 export * from './export/gimnasio'
 export * from './export/salonJuegos'
-export * from './export/canchaVoley'
+export * from './export/canchaVoley1'
+export * from './export/canchaVoley2'
 export * from './export/canchaMicro'
 
 export * from './export/cafeteria_latia'
@@ -22,6 +23,7 @@ export * from './export/laboratorioAnatomia'
 export * from './export/laboratorioCiencias'
 
 export * from './export/vivero'
+export * from './export/piscicultura'
 export * from './export/galpon'
 export * from './export/piara'
 

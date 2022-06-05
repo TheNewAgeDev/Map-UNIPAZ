@@ -67,9 +67,9 @@ export const onEachFeature = async (feature, layer) => {
     const { waitFor } = await import('./util')
     interval.clearAll()
 
-    const message = feature.properties.html
+    const message = feature?.properties?.html
       ? getMessage(feature.properties)
-      : `<strong>Edificio</strong>: ${feature.properties.name}`
+      : `<strong>Edificio</strong>: ${feature?.properties?.name}`
 
     sidebar.setContent(message)
 

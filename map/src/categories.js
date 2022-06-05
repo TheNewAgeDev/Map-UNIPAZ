@@ -92,7 +92,7 @@ export const CATEGORIES = {
 }
 
 function getCategory (props) {
-  return CATEGORIES[props.category?.toUpperCase()] || CATEGORIES.DEFAULT
+  return CATEGORIES[props?.category?.toUpperCase()] || CATEGORIES.DEFAULT
 }
 
 function addStyleDefault (props) {
@@ -101,9 +101,9 @@ function addStyleDefault (props) {
   return {
     fillColor: category.fillColor,
     fillOpacity: 0.6,
-    weight: props.weight || category.weight || 2,
-    opacity: props.opacity || category.opacity,
-    color: props.color || category.color,
+    weight: props?.weight || category.weight || 2,
+    opacity: props?.opacity || category.opacity,
+    color: props?.color || category.color,
     dashArray: '3'
   }
 }
@@ -116,7 +116,7 @@ export async function styleHover (e) {
   const category = getCategory(props)
 
   layer.setStyle({
-    weight: props.weight || category.weight || 2,
+    weight: props?.weight || category.weight || 2,
     fillColor: category.hoverFillColor,
     color: category.hoverColor,
     dashArray: '3',
