@@ -7,7 +7,7 @@ import '@/select'
 import { info, onEachFeature } from '@/info'
 import { styleDefault, CATEGORIES } from '@/categories'
 import { UNIPAZ_CATEGORIES } from '@/geoJson/unipaz'
-import { isMobileNow, useImage } from '@/util'
+import { isMobileNow, useVideo } from '@/util'
 
 import '#/customPlugins/legend'
 
@@ -18,7 +18,7 @@ const configStorage = getConfigStorage()
 const HTML_RETORNO = `
   <div class="content-popup-delimits">
     <h3 class="title-popup" style="margin:0;">Retorno a la Universidad</h3>
-    ${useImage('Retorno', 'retorno.jpg')}
+    ${useVideo('Retorno', 'retorno-1.m4v')}
     <p>El retorno es la vía que deben tomar todas las personas que quieran ingresar a la universidad si vienen desde Barrancabermeja, la invitación que hace el instituto universitario de la paz, es ir hasta el retorno para poder ingresar correctamente a la institución, y no poner en riesgo la vida de nadie.</p>
   </div>
 `

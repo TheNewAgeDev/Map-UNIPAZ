@@ -1,4 +1,4 @@
-import { useImage, useAccordeon } from '@/util'
+import { useImage, useSlider, useAccordeon } from '@/util'
 
 const SLIDERS_FLOOR1 = [
   {
@@ -195,10 +195,17 @@ const HTML = () => `
     ${useImage(EDIF_ADMIN, 'areaAdmin.jpg')}
 
     <h4 style="margin-top:15px;">Piso 1</h4>
-    ${useImage(EDIF_ADMIN, 'areaAdmin-1.jpg')}
+
+    ${
+      useSlider([
+        useImage(EDIF_ADMIN, 'areaAdmin-1.jpg'), useImage(EDIF_ADMIN, 'areaAdmin-2.jpg')
+      ])
+    }
+
     ${useAccordeon(SLIDERS_FLOOR1)}
 
     <h4>Piso 2</h4>
+    ${useImage(EDIF_ADMIN, 'areaAdmin-3.jpg')}
     ${useAccordeon(SLIDERS_FLOOR2)}
   </div>
 `

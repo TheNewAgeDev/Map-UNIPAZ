@@ -1,4 +1,4 @@
-import { useImage, useAccordeon } from '@/util'
+import { useImage, useSlider, useAccordeon } from '@/util'
 
 const SLIDERS_1 = [
   {
@@ -26,12 +26,23 @@ const HTML = () => `
     ${useImage(BIBLIOTECA, 'biblioteca.jpg')}
 
     <h4 style="margin-top:15px;">Piso 1</h4>
-    ${useImage(BIBLIOTECA, 'biblioteca-1.jpg')}
+    ${
+      useSlider([
+        useImage(BIBLIOTECA, 'biblioteca-3.jpg'), useImage(BIBLIOTECA, 'biblioteca-1.jpg')
+      ])
+    }
     <p style="margin-bottom: 0;">Sitio donde se puede recurrir para leer, buscar información y estudiar. Cuenta con papelería, fotocopiadora, sala de fotointerpretación, sala de lectura y música.</p>
     ${useAccordeon(SLIDERS_1)}
 
-    <h4 style="margin-bottom:15px;">Piso 2</h4>
-    ${useImage(BIBLIOTECA, 'biblioteca-2.jpg')}
+    <h4>Piso 2</h4>
+    ${
+      useSlider([
+        useImage(BIBLIOTECA, 'biblioteca-4.jpg'),
+        useImage(BIBLIOTECA, 'biblioteca-2.jpg'),
+        useImage(BIBLIOTECA, 'biblioteca-5.jpg'),
+        useImage(BIBLIOTECA, 'biblioteca-6.jpg')
+      ])
+    }
     <ul class="info-ul">
       <li>Auditorios principales, 1 y 2 </li>
       <li>Salas de informática</li>

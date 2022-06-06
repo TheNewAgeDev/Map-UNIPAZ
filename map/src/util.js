@@ -37,6 +37,20 @@ export const useImage = (delimit, image) => {
   />`
 }
 
+export const useVideo = (delimit, video) => {
+  const alt = delimit?.properties?.name || delimit || 'Delimitación'
+  const DEFAULT_VIDEO = 'https://i.imgur.com/0w8PZnW.jpg'
+
+  return `<video
+    class="videos-popup"
+    src="/images/delimit/${video}"
+    controls
+    muted
+    autoplay
+    onerror="this.onerror=null;this.src='${DEFAULT_VIDEO}';"
+    alt="${alt}"><strong>Recurso no Disponible en tu navegador :(</strong></video>`
+}
+
 /* use Accordeon Functions */
 
 export const useAccordeon = (sliders) => {
