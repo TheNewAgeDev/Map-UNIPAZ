@@ -1,6 +1,25 @@
+import { useImage, useSlider } from '@/util'
+
 const HTML = () => `
 <div class="content-popup-delimits">
   <h3 class="title-popup">{{ title }}</h3>
+
+  ${
+    useSlider([
+      useImage(ESTABLOS_1, 'establos.jpg'), useImage(ESTABLOS_1, 'establos-1.jpg')
+    ])
+  }
+
+  <p>Unipaz cuenta con estructuras agropecuarias en las que se pueden realizar tareas de veterinaria y alojamiento de los Bovinos y Equinos. Se utilizan para guardar a los animales, procesos de vacunación y ordeñado de la vaca.</p>
+
+  ${
+    useSlider([
+      useImage(ESTABLOS_1, 'establos-2.jpg'),
+      useImage(ESTABLOS_1, 'establos-3.jpg'),
+      useImage(ESTABLOS_1, 'establos-4.jpg'),
+      useImage(ESTABLOS_1, 'establos-5.jpg')
+    ])
+  }
 </div>
 `
 

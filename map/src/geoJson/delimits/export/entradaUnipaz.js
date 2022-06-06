@@ -1,10 +1,12 @@
-import { getGeoJsonFromCircle } from '@/util'
+import { getGeoJsonFromCircle, useVideo } from '@/util'
 
 const HTML = () => `
   <div class="content-popup-delimits">
     <h3 class="title-popup">{{ title }}</h3>
 
-    <p><strong>Bienvenido al Instituto Universitario de la Paz - UNIPAZ!!</strong></p>
+    ${useVideo(ENTRADA, 'entradaUnipaz.m4v')}
+
+    <strong class="copyright">Bienvenido al Instituto Universitario de la Paz - UNIPAZ!!</strong>
   </div>
 `
 
@@ -15,7 +17,7 @@ export const ENTRADA = {
   geometry: geoJsonCoordinates,
   id: '25eb74f7-667a-4c8c-b7e2-f936f0cce779',
   properties: {
-    name: 'Entrada Unipaz',
+    name: 'Entrada UNIPAZ',
     category: 'Infraestructura',
     html: HTML
   }
