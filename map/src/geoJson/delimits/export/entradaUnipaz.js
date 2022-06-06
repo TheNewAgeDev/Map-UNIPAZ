@@ -6,7 +6,7 @@ const HTML = () => `
 
     ${useVideo(ENTRADA, 'entradaUnipaz.m4v')}
 
-    <strong class="copyright">Bienvenido al Instituto Universitario de la Paz - UNIPAZ!!</strong>
+    <strong class="copyright">¡¡Bienvenido al Instituto Universitario de la Paz - UNIPAZ!!</strong>
   </div>
 `
 
