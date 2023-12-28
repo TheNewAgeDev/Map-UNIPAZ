@@ -61,7 +61,7 @@ npm run build:page
 
 > - [Natalia Rodriguez](https://github.com/XNataX)
 > - [Luis Osorio](https://github.com/LuisFOsG)
-> - [Carlos Lopez](https://github.com/xJhanx)
+> - [Jhan Lopez](https://github.com/xJhanx)
 > - [Breinner Rueda](https://github.com/DasCode-Brm)
 > - [Bryan Muñoz](https://github.com/BryanSMC)
 > - [Aldair Caballero](https://github.com/ItzAlda1)
